@@ -1,17 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const burgerBtn = document.getElementById("btn_burger")
-  const mobileMenu = document.getElementById("mobileMenu")
+  const burgerBtn = document.getElementById("btn_burger");
+  const sidebar = document.getElementById("sidebar");
+  const cover  = document.getElementById("cover");
 
-  // Toggle mobile menu visibility
-  burgerBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden")
-  })
-
-  // Close menu when a link is clicked
-  const menuLinks = mobileMenu.querySelectorAll("a")
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden")
+    burgerBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("translate-x-full");
+      cover.classList.toggle("hidden");
+    });
+    cover.addEventListener("click" , ()=>{
+      sidebar.classList.toggle("translate-x-full");
+      cover.classList.toggle("hidden");
     })
-  })
-})
