@@ -1,11 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Tailwind Test</title>
-  <link href="dist/output.css" rel="stylesheet">
-</head>
-<body class="bg-blue-700 text-white h-screen flex items-center justify-center">
-  <h1 class="text-5xl font-bold text-red-500">Tailwind Works 🎉</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      h1 {
+        font-family: "Sauce Tomato", sans-serif;
+        background: linear-gradient(
+          90deg,
+          var(--gradient-start),
+          var(--gradient-end)
+        );
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      :root {
+        --gradient-start: #a9291d;
+        --gradient-end: #260206;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <main class="relative w-full min-h-screen" style="background-image: url(/assets/home_img/background.jpg); background-size: cover; ">
+        
+        <div class="overlay absolute inset-0"></div>
+        
+        <section class="relative z-10 p-8">
+            <h1 class="text-white text-4xl font-bold">Your Content Here</h1>
+            <p class="text-white mt-4">Background image with dark overlay</p>
+        </section>
+
+    </main> -->
+
+    <main>
+      <section class="bg-[#101018] cover min-h-screen p-6 relative">
+        <h1 class="text-center text-[9rem]/50 tracking-[.20em] font-black">
+          SMOKY <br />
+          <span class="text-[10rem]">CHEEZY</span> <br />
+          <span class="text-[12rem]">BURGER</span>
+        </h1>
+        <img
+          src="./assets/images/home_img/carousel1.png"
+          alt="Burger"
+          class="absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-auto drop-shadow-[0_0_25px_rgba(0,0,0,0.8)]"/>
+          <div class="absolute top-[2%] right-[4%] rotate-[-19deg]">
+           <img src="./assets/images/home_img/carousel.png" alt="">
+      </div>
+      </section>
+    </main>
+  </body>
 </html>
