@@ -1,23 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Tailwind Test</title>
-  <link href="../dist/output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-  <body class="bg-blue-700 text-white h-screen">
-    <header>
-      <nav class="bg-black w-full h-screen">
-        <img src="" alt="">
-        <ul>
-          <li>bbb</li>
-          <li></li>
-          <li></li>
-        </ul>
-      </nav>
-    </header>
-  </body>
+<body>
+  <section class="bg-[#101018] w-full h-screen">
+    <div class="all-part-dtails bg-[#121212] mx-14">
+      <h1 class="font-bold text-7xl text-white text-center  ">Dish <span class="text-[#91011A]">Details</span></h1>
+      <div class="card-details-food flex justify-around text-white bg-[#91011A] mx-24 p-9">
+        <div class="text-details">
+          <h1 class="font-bold text-3xl my-10">Deluxe Pizza</h1>
+          <br>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Assumenda voluptate accusamus ipsam commodi.
+            Dolore iusto qui vero voluptas mollitia esse assumenda, <br> alias maiores to
+            officia?</p>
+        </div>
+        <div class="image-details">
+          <img src="/assets/images/details-image/pizza.png" alt="pizza">
+        </div>
+      </div>
+      <div class="btn-choix-size w-[15%]">
+        <div class="btn-choix bg-white flex justify-between">
+          <div class="size-food">
+            <h1>Small</h1>
+          </div>
+          <div class="price-size bg-[#dd0b0b] w-[50%] text-center">
+            <h1>50 MAD</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
 
 </html>
