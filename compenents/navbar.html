@@ -1,54 +1,74 @@
-<!doctype html>
-<html lang="en">
+<nav class="fixed top-0 left-0 w-full h-[100px] z-[9999]">
+  <!-- Barre principale -->
+  <div class="flex justify-between items-center h-full px-8 bg-[#101018] text-white">
+    <img class="w-[150px]" src="../assets/images/Nav/logo-nar.png" alt="logo foodorder+">
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tailwind Test</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-
-</head>
-
-<body class=" p-0 m-0 box-border bg-[#101018]">
-  <nav id="component/nav"
-    class="fixed align-center pl-8 pr-8 text-white h-[100px] w-full flex justify-between backdrop-blur items-center p-4">
-    <img class="w-[240px]" src="../assets/images/Nav/logo-nar.png" alt="logo foodorder+">
     <ul class="hidden md:flex gap-8">
-      <a href="../index.html">
-        <li class="flex justify-center items-center w-[85px] h-[34px] rounded-[10px]  hover:bg-[#91011A]">Home</li>
-      </a>
-      <a href="#Menu">
-        <li class="flex justify-center items-center w-[85px] h-[34px] rounded-[10px]  hover:bg-[#91011A]">Menu</li>
-      </a>
-      <a href="../Pages/about.html">
-        <li class="flex justify-center items-center w-[85px] h-[34px] rounded-[10px]  hover:bg-[#91011A]">About US</li>
-      </a>
+      <li class="hover:bg-[#91011A] px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../index.html">Home</a></li>
+      <li class="hover:bg-[#91011A] px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="#Menu">Menu</a></li>
+      <li class="hover:bg-[#91011A] px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../Pages/about.html">About US</a></li>
     </ul>
+
     <div class="hidden md:flex relative">
-      <div class="h-[37.92px] w-[47.4px] bg-[#91011A] rounded-[4px]"></div>
+      <div class="h-[38px] w-[47px] bg-[#91011A] rounded-[4px]"></div>
       <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        src="../assets/images/Nav/shopping-cart-icon.svg" alt="logo">
-    </div>
-    <button id="btn_burger" class="flex md:hidden">☰</button>
-    
-
-    
-    <div id="mobileMenu" class="hidden flex-col gap-4 bg-[#101018] p-4 absolute top-[100px] w-full left-0 z-50">
-      <ul class="flex flex-col gap-2 md:hidden">
-        <li class="flex justify-center items-center w-full h-[34px] rounded-[10px] hover:bg-[#91011A]">
-          <a href="../index.html" class="w-full text-center">Home</a>
-
-        </li>
-        <li class="flex justify-center items-center w-full h-[34px] rounded-[10px] hover:bg-[#91011A]">
-          <a href="#Menu" class="w-full text-center">Menu</a>
-        </li>
-        <li class="flex justify-center items-center w-full h-[34px] rounded-[10px] hover:bg-[#91011A]">
-          <a href="../Pages/about.html" class="w-full text-center">About US</a>
-        </li>
-      </ul>
+        src="../assets/images/Nav/shopping-cart-icon.svg" alt="cart">
     </div>
 
-  </nav>
-  <script src="../js/nav.js"></script>
-</body>
+    <button id="btn_burger" class="flex md:hidden text-4xl">☰</button>
+  </div>
 
-</html>
+  <!-- pour hide sidebar -->
+  <div id="cover" class="hidden fixed  top-0 left-0 right-0 bottom-0 bg-[#181826]/10"></div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="fixed top-0 right-0 h-full w-[300px] bg-[#181826]/70 backdrop-blur-lg border-l border-white/20 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col items-center p-6 space-y-8">
+
+    <!-- Logo -->
+    <img class="w-[180px]" src="../assets/images/Nav/logo-nar.png" alt="logo foodorder+">
+
+    <!-- Panier -->
+    <div class="relative">
+      <div class="h-[40px] w-[50px] bg-[#91011A] rounded-[6px] blur-[1px] border border-[#91011A]/30"></div>
+      <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        src="../assets/images/Nav/shopping-cart-icon.svg" alt="panier">
+    </div>
+
+    <!-- Menu -->
+    <ul class="flex flex-col gap-6 w-full text-center">
+      <li
+        class="py-2 border border-white/20 rounded-[50px] backdrop-blur-sm hover:bg-[#91011A] transition duration-300 cursor-pointer">
+        <a href="../index.html">Home</a>
+      </li>
+      <li
+        class="py-2 border border-white/20 rounded-[50px] backdrop-blur-sm hover:bg-[#91011A] transition duration-300 cursor-pointer">
+        <a href="#Menu">Menu</a>
+      </li>
+      <li
+        class="py-2 border border-white/20 rounded-[50px] backdrop-blur-sm hover:bg-[#91011A] transition duration-300 cursor-pointer">
+        <a href="../Pages/about.html">About US</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const burgerBtn = document.getElementById("btn_burger");
+      const sidebar = document.getElementById("sidebar");
+      const cover = document.getElementById("cover");
+
+      // Ouvrir  le sidebar
+      burgerBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("translate-x-full");
+        cover.classList.toggle("hidden");
+      });
+
+      // Fermer quand on clique sur le cover
+      cover.addEventListener("click", () => {
+        sidebar.classList.toggle("translate-x-full");
+        cover.classList.toggle("hidden");
+      });
+    });
+  </script>
+</nav>
