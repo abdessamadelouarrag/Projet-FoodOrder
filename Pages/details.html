@@ -5,37 +5,173 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
   <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
-<body>
-  <section class="bg-[#101018] w-full h-screen">
-    <div class="all-part-dtails bg-[#121212] mx-14">
-      <h1 class="font-bold text-7xl text-white text-center  ">Dish <span class="text-[#91011A]">Details</span></h1>
-      <div class="card-details-food flex justify-around text-white bg-[#91011A] mx-24 p-9">
-        <div class="text-details">
-          <h1 class="font-bold text-3xl my-10">Deluxe Pizza</h1>
-          <br>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Assumenda voluptate accusamus ipsam commodi.
-            Dolore iusto qui vero voluptas mollitia esse assumenda, <br> alias maiores to
-            officia?</p>
-        </div>
-        <div class="image-details">
-          <img src="/assets/images/details-image/pizza.png" alt="pizza">
-        </div>
-      </div>
-      <div class="btn-choix-size w-[15%]">
-        <div class="btn-choix bg-white flex justify-between">
-          <div class="size-food">
-            <h1>Small</h1>
+<body class="bg-[#101018] w-full">
+  <section>
+
+    <!--all part details-->
+
+    <div class="all-part-details bg-[#121212] mx-14 h-screen">
+      <br>
+      <h1 class="font-bold text-7xl text-white text-center">Dish <span class="text-[#91011A]">Details</span></h1>
+      <br>
+
+      <!--card details-->
+
+      <div class="card-details-food text-white bg-[#91011A] mx-24 p-9 rounded-[8px]">
+
+        <div class="part-top-dtails-card flex justify-around">
+
+        <!--text details food-->
+
+          <div class="text-details">
+            <h1 class="font-bold text-3xl my-10">Deluxe Pizza</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Assumenda voluptate accusamus ipsam commodi.
+              Dolore iusto qui vero voluptas mollitia esse assumenda, <br> alias maiores to
+              officia?</p>
           </div>
-          <div class="price-size bg-[#dd0b0b] w-[50%] text-center">
-            <h1>50 MAD</h1>
+
+          <!-- image details test -->
+
+          <div class="image-details">
+            <img src="/assets/images/details-image/pizza.png" alt="pizza">
           </div>
         </div>
+
+        <!--all btn choix size food-->
+
+        <div class="btn-choix-size w-[18%] flex gap-3">
+
+          <!--button choix size small-->
+
+          <div class="btn-choix bg-white flex justify-between items-center w-[100%] rounded-[6px] cursor-pointer">
+            <div class="size-food text-[#121212] font-bold m-2 p-2">
+              <h1>Small</h1>
+            </div>
+            <div class="price-size bg-[#121212] w-[140px] text-center m-2 p-3 rounded-[5px]">
+              <h1>50 MAD</h1>
+            </div>
+          </div>
+
+          <!--button choix size medium-->
+
+          <div class="btn-choix bg-white flex justify-between items-center w-[120%] rounded-[6px] cursor-pointer">
+            <div class="size-food text-[#121212] font-bold m-2 p-2">
+              <h1>Medium</h1>
+            </div>
+            <div class="price-size bg-[#121212] w-[140px] text-center m-2 p-3 rounded-[5px]">
+              <h1>50 MAD</h1>
+            </div>
+          </div>
+
+          <!--button choix size large-->
+
+          <div class="btn-choix bg-white flex justify-between items-center w-[100%] rounded-[6px] cursor-pointer">
+            <div class="size-food text-[#121212] font-bold m-2 p-2">
+              <h1>Large</h1>
+            </div>
+            <div class="price-size bg-[#121212] w-[140px] text-center m-2 p-3 rounded-[5px]">
+              <h1>50 MAD</h1>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="price-btn-and-total flex">
+
+          <!-- btn choix quant-->
+  
+          <div class="btn-how-much flex mt-10 gap-3">
+            <button class="btn-minus mb-5">
+              <i class="fas fa-minus  bg-white text-[#91011A] flex justify-center items-center w-[30px] h-[30px] rounded-full"></i>
+            </button>
+            <div class="numbers-btn bg-white text-black w-[50px] h-[45px] flex justify-center items-center font-bold text-[25px] rounded-[5px]">
+              <span id="number-total-food">1</span>
+            </div>
+            <button class="btn-plus mb-5">
+              <i class="fas fa-plus bg-white text-[#91011A] flex justify-center items-center w-[30px] h-[30px] rounded-full"></i>
+            </button>
+          </div>
+
+
+          <!-- btn total price-->
+
+          <div class="total-price bg-[#860000] flex gap-2 h-[50px] w-[150px] mt-[2.5rem] ml-[50px] justify-around items-center rounded-[8px] text-[20px]">
+            <h1><span id="total-price">50</span></h1>
+            <h1 class="border-s-2 px-2">MAD</h1>
+          </div>
+
+          <div class="btn-add-to-card flex bg-[#FC8A06] w-[250px] h-[70px] p-2 justify-around items-center rounded-[10px] mt-[2.5rem] ml-96 cursor-pointer hover:bg-[#BC6F05]">
+          <h1 class="text-[20px] font-bold">ADD TO CARD</h1>
+          <img src="/assets/images/details-image/shopping-cart.png" alt="shopping-card">
+        </div>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <script>
+
+    // for target a btn size
+
+   const btns = document.querySelectorAll(".btn-choix");
+
+    btns.forEach(btn => {
+      btn.addEventListener("click", () => {
+
+        // Reset all buttons
+
+        btns.forEach(reset => {
+          reset.style.backgroundColor = "";
+          const size = reset.querySelector(".size-food");
+          size.style.color = "";
+        });
+
+        // Activate the clicked one
+
+        btn.style.backgroundColor = "black";
+        const size = btn.querySelector(".size-food");
+        size.style.color = "white";
+      });
+    });
+
+    const plusPriceValue = document.querySelector('.btn-plus');
+    // console.log(aMed);
+    
+    plusPriceValue.addEventListener('click', () => {
+      const pluS = document.querySelector('#number-total-food');
+      let valuePlus = parseInt(pluS.textContent);
+      valuePlus++;
+      pluS.textContent = valuePlus;
+
+      const totalPrice = document.querySelector('#total-price');
+      let valuePrice = parseInt(totalPrice.textContent);
+      valuePrice+=50;
+      totalPrice.textContent = valuePrice;
+    })
+
+    const minusPriceValue = document.querySelector('.btn-minus')
+
+    minusPriceValue.addEventListener('click', () => {
+      const minuS = document.querySelector('#number-total-food');
+      let valueMinus = parseInt(minuS.textContent);
+      valueMinus--;
+      minuS.textContent = valueMinus;
+
+      const totalPrice = document.querySelector('#total-price');
+      let valuePrice = parseInt(totalPrice.textContent);
+      valuePrice-=50;
+      totalPrice.textContent = valuePrice;
+    });
+  </script>
 </body>
 
 </html>
