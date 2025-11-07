@@ -1,11 +1,54 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tailwind Test</title>
-  <link href="../dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body class="bg-blue-700 text-white h-screen flex items-center justify-center">
-  <h1 class="text-5xl font-bold text-red-500">Tailwind Works 🎉</h1>
+
+<body class=" p-0 m-0 box-border bg-[#101018]">
+  <nav id="component/nav"
+    class="fixed align-center pl-8 pr-8 text-white h-[100px] w-full flex justify-between backdrop-blur items-center p-4">
+    <img class="w-[240px]" src="../assets/images/Nav/logo-nar.png" alt="logo foodorder+">
+    <ul class="hidden md:flex gap-8">
+      <a href="../index.html">
+        <li class="flex justify-center items-center w-[85px] h-[34px] rounded-[10px]  hover:bg-[#91011A]">Home</li>
+      </a>
+      <a href="#Menu">
+        <li class="flex justify-center items-center w-[85px] h-[34px] rounded-[10px]  hover:bg-[#91011A]">Menu</li>
+      </a>
+      <a href="../Pages/about.html">
+        <li class="flex justify-center items-center w-[85px] h-[34px] rounded-[10px]  hover:bg-[#91011A]">About US</li>
+      </a>
+    </ul>
+    <div class="hidden md:flex relative">
+      <div class="h-[37.92px] w-[47.4px] bg-[#91011A] rounded-[4px]"></div>
+      <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        src="../assets/images/Nav/shopping-cart-icon.svg" alt="logo">
+    </div>
+    <button id="btn_burger" class="flex md:hidden">☰</button>
+    
+
+    
+    <div id="mobileMenu" class="hidden flex-col gap-4 bg-[#101018] p-4 absolute top-[100px] w-full left-0 z-50">
+      <ul class="flex flex-col gap-2 md:hidden">
+        <li class="flex justify-center items-center w-full h-[34px] rounded-[10px] hover:bg-[#91011A]">
+          <a href="../index.html" class="w-full text-center">Home</a>
+
+        </li>
+        <li class="flex justify-center items-center w-full h-[34px] rounded-[10px] hover:bg-[#91011A]">
+          <a href="#Menu" class="w-full text-center">Menu</a>
+        </li>
+        <li class="flex justify-center items-center w-full h-[34px] rounded-[10px] hover:bg-[#91011A]">
+          <a href="../Pages/about.html" class="w-full text-center">About US</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+  <script src="../js/nav.js"></script>
 </body>
+
 </html>
