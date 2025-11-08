@@ -151,9 +151,13 @@
     font-family: 'P-ThinItalic', sans-serif;
 }
 
+:root {
+    --font-default: 'P-Regular', sans-serif;
+}
 
-
-
+body {
+    font-family: 'P-Regular', sans-serif;
+}
 
 
 .TX-red{
