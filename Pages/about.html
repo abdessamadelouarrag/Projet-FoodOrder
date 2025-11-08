@@ -1,11 +1,733 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Tailwind Test</title>
-  <link href="../dist/output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+        }
+        
+        .navbar {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #dc2626, #7f1d1d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+        }
+        
+        .card {
+            background: #1a1a1a;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('./assets/images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        
+        @media (max-width: 640px) {
+            .section-title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
 </head>
-<body class="bg-blue-700 text-white h-screen flex items-center justify-center">
-  <h1 class="text-5xl font-bold text-red-500">Tailwind Works 🎉</h1>
+<body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="navbar fixed w-full top-0 z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <div class="flex items-center gap-2">
+                    <img src="./assets/images/logo.png" alt="Logo" class="h-10 sm:h-12">
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#" class="text-white hover:text-red-500 transition-colors">Home</a>
+                    <a href="#menu" class="text-gray-300 hover:text-red-500 transition-colors">Menu</a>
+                    <a href="#team" class="text-gray-300 hover:text-red-500 transition-colors">Our Team</a>
+                    <a href="#contact" class="text-gray-300 hover:text-red-500 transition-colors">Contact</a>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <button class="hidden sm:block btn-primary text-white px-6 py-2 rounded-full font-semibold">
+                        Order Now
+                    </button>
+                    <button class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="space-y-6">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
+                        Experience the taste of <span class="gradient-text">authentic cuisine</span>
+                    </h1>
+                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
+                        Our discovery and expertise have taken us across the world to bring authentic flavors and unforgettable culinary experiences.
+                    </p>
+                    <button class="btn-primary text-white px-8 py-3 rounded-full font-semibold text-lg">
+                        Explore Menu
+                    </button>
+                </div>
+                <div class="relative">
+                    <img src="./assets/images/hero-dish.png" alt="Featured Dish" class="w-full rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Chef Section -->
+    <section class="py-16 sm:py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <div class="relative">
+                    <img src="./assets/images/chef-main.jpg" alt="Our Chef" class="w-full rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-red-600 text-white px-8 py-4 rounded-xl shadow-xl">
+                        <p class="text-3xl font-bold">20+</p>
+                        <p class="text-sm">Years Experience</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <h2 class="section-title gradient-text">OUR CHEF</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold">Master of Culinary Arts</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Our head chef brings decades of experience from the finest kitchens around the world. 
+                        With a passion for innovation and respect for tradition, every dish tells a story of 
+                        dedication, creativity, and love for the culinary arts.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-300">Michelin Star Experience</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-300">International Cuisine Expert</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-300">Award Winning Chef</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary text-white px-8 py-3 rounded-full font-semibold mt-4">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Menu Section -->
+    <section id="menu" class="py-16 sm:py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="section-title mb-4">
+                    <span class="text-white">Special </span>
+                    <span class="gradient-text">Menu</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Discover our chef's carefully curated selection of signature dishes
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Menu Card 1 -->
+                <div class="card rounded-2xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="./assets/images/menu-1.jpg" alt="Dish 1" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
+                            $24.99
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Grilled Salmon</h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Fresh Atlantic salmon with herbs, served with seasonal vegetables
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-1">
+                                <span class="text-yellow-400">★</span>
+                                <span class="text-yellow-400">★</span>
+                                <span class="text-yellow-400">★</span>
+                                <span class="text-yellow-400">★</span>
+                                <span class="text-yellow-400">★</span>
+                            </div>
+                            <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-semibold transition-colors">
+                                Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Card 2 -->
+                <div class="card rounded-2xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="./assets/images/menu-2.jpg" alt="Dish 2" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
+                            $18.99
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Pasta Carbonara</h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Classic Italian pasta with bacon, eggs, and parmesan cheese
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-1">
+                                <span class="text-yellow-400">★</span>
+                                <span class="text-yellow-400">★</span>
+                                <span class="text-yellow-400">★</span>
+                                <span class="text-yellow-400">★</span>
+                                <span class="text-gray-400">★</span>
+                            </div>
+                            <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-semibold transition-colors">
+                                Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Card 3 -->
+                <div class="card rounded-2xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="./assets/images/menu-3.jpg" alt="Dish 3" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
+                            $32.99
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Wagyu Steak</h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Premium wagyu beef cooked to perfection with truffle butter
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-1">
+                                <span class="text-yellow-400">★</span>
+                                <span class="text-yellow-400">★</span>
+                                <span class="text-yellow-400">★</span>
+                                <span class="text-yellow-400">★</span>
+                                <span class="text-yellow-400">★</span>
+                            </div>
+                            <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-semibold transition-colors">
+                                Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="btn-primary text-white px-10 py-3 rounded-full font-semibold text-lg">
+                    View Full Menu
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="py-16 sm:py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="section-title">
+                    <span class="text-white">Our </span>
+                    <span class="gradient-text">Team</span>
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <!-- Team Member 1 -->
+                <div class="card rounded-2xl overflow-hidden text-center">
+                    <div class="relative h-80">
+                        <img src="./assets/images/chef-1.jpg" alt="Chef Manager" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">John Anderson</h3>
+                        <p class="text-red-500 font-semibold mb-3">CHEF MANAGER</p>
+                        <div class="flex justify-center gap-3">
+                            <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="card rounded-2xl overflow-hidden text-center">
+                    <div class="relative h-80">
+                        <img src="./assets/images/chef-2.jpg" alt="Assistant Chef" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Sarah Williams</h3>
+                        <p class="text-red-500 font-semibold mb-3">ASSISTANT CHEF</p>
+                        <div class="flex justify-center gap-3">
+                            <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="card rounded-2xl overflow-hidden text-center">
+                    <div class="relative h-80">
+                        <img src="./assets/images/chef-3.jpg" alt="Chef Assistant" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Michael Chen</h3>
+                        <p class="text-red-500 font-semibold mb-3">CHEF ASSISTANT</p>
+                        <div class="flex justify-center gap-3">
+                            <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="card rounded-2xl overflow-hidden text-center">
+                    <div class="relative h-80">
+                        <img src="./assets/images/chef-4.jpg" alt="Head Mixologist" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Emma Rodriguez</h3>
+                        <p class="text-red-500 font-semibold mb-3">HEAD MIXOLOGIST</p>
+                        <div class="flex justify-center gap-3">
+                            <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Map -->
+                <div class="relative h-96 lg:h-full min-h-[400px] rounded-2xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215213465841!2d-73.98784368459395!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1635959643987!5m2!1sen!2sus" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="space-y-6">
+                    <h2 class="section-title">
+                        <span class="text-white">Get in </span>
+                        <span class="gradient-text">Touch</span>
+                    </h2>
+                    
+                    <form class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <input 
+                                type="text" 
+                                placeholder="Your Name" 
+                                class="w-full px-6 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-red-500 transition-colors"
+                            >
+                            <input 
+                                type="email" 
+                                placeholder="Your Email" 
+                                class="w-full px-6 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-red-500 transition-colors"
+                            >
+                        </div>
+                        <input 
+                            type="text" 
+                            placeholder="Subject" 
+                            class="w-full px-6 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-red-500 transition-colors"
+                        >
+                        <textarea 
+                            rows="6" 
+                            placeholder="Your Message" 
+                            class="w-full px-6 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-red-500 transition-colors resize-none"
+                        ></textarea>
+                        <button type="submit" class="btn-primary text-white px-10 py-3 rounded-full font-semibold text-lg w-full sm:w-auto">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <div class="pt-8 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-600 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Address</h4>
+                                <p class="text-gray-400">123 Main Street, New York, NY 10001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-600 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Email</h4>
+                                <p class="text-gray-400">contact@restaurant.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-600 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Phone</h4>
+                                <p class="text-gray-400">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 sm:py-24 bg-black">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="section-title gradient-text">FAQ</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <details class="card rounded-xl p-6 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
+                        <span>What are your opening hours?</span>
+                        <svg class="w-6 h-6 text-red-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </summary>
+                    <p class="mt-4 text-gray-400 leading-relaxed">
+                        We are open Monday to Saturday from 11:00 AM to 11:00 PM, and Sundays from 12:00 PM to 10:00 PM. 
+                        We recommend making a reservation for dinner service, especially on weekends.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 2 -->
+                <details class="card rounded-xl p-6 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
+                        <span>Do you offer vegetarian and vegan options?</span>
+                        <svg class="w-6 h-6 text-red-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </summary>
+                    <p class="mt-4 text-gray-400 leading-relaxed">
+                        Yes! We have an extensive selection of vegetarian and vegan dishes on our menu. Our chefs are also 
+                        happy to accommodate special dietary requirements with advance notice.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="card rounded-xl p-6 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
+                        <span>Where do you source your produce?</span>
+                        <svg class="w-6 h-6 text-red-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </summary>
+                    <p class="mt-4 text-gray-400 leading-relaxed">
+                        We work exclusively with local farmers and sustainable suppliers to ensure the freshest, 
+                        highest quality ingredients. All our produce is organic and sourced within 100 miles of our restaurant.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 4 -->
+                <details class="card rounded-xl p-6 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
+                        <span>Do you offer catering services?</span>
+                        <svg class="w-6 h-6 text-red-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </summary>
+                    <p class="mt-4 text-gray-400 leading-relaxed">
+                        Yes, we provide full-service catering for events of all sizes, from intimate gatherings to large 
+                        corporate events. Contact us directly to discuss your catering needs and receive a custom quote.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 5 -->
+                <details class="card rounded-xl p-6 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
+                        <span>How can I make a reservation?</span>
+                        <svg class="w-6 h-6 text-red-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </summary>
+                    <p class="mt-4 text-gray-400 leading-relaxed">
+                        You can make a reservation by calling us at +1 (555) 123-4567, booking online through our website, 
+                        or using popular reservation platforms. We recommend booking at least 2-3 days in advance for optimal availability.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborating Brands Section -->
+    <section class="py-16 sm:py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="section-title">
+                    <span class="text-white">Collaborating </span>
+                    <span class="gradient-text">with</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8">
+                <!-- Brand 1 -->
+                <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
+                    <div class="aspect-square bg-red-900 flex items-center justify-center p-6">
+                        <img src="./assets/images/brands/mcdonalds.png" alt="McDonald's" class="w-full h-auto object-contain">
+                    </div>
+                </div>
+
+                <!-- Brand 2 -->
+                <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
+                    <div class="aspect-square bg-red-900 flex items-center justify-center p-6">
+                        <img src="./assets/images/brands/papa-johns.png" alt="Papa Johns" class="w-full h-auto object-contain">
+                    </div>
+                </div>
+
+                <!-- Brand 3 -->
+                <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
+                    <div class="aspect-square bg-red-900 flex items-center justify-center p-6">
+                        <img src="./assets/images/brands/kfc.png" alt="KFC" class="w-full h-auto object-contain">
+                    </div>
+                </div>
+
+                <!-- Brand 4 -->
+                <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
+                    <div class="aspect-square bg-red-900 flex items-center justify-center p-6">
+                        <img src="./assets/images/brands/texas.png" alt="Texas Chicken" class="w-full h-auto object-contain">
+                    </div>
+                </div>
+
+                <!-- Brand 5 -->
+                <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
+                    <div class="aspect-square bg-red-900 flex items-center justify-center p-6">
+                        <img src="./assets/images/brands/burger-king.png" alt="Burger King" class="w-full h-auto object-contain">
+                    </div>
+                </div>
+
+                <!-- Brand 6 -->
+                <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
+                    <div class="aspect-square bg-red-900 flex items-center justify-center p-6">
+                        <img src="./assets/images/brands/shawarma.png" alt="Shawarma Plus" class="w-full h-auto object-contain">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 gradient-text">About Us</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Experience culinary excellence with authentic flavors and premium ingredients. 
+                        We're committed to bringing you unforgettable dining experiences.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-zinc-900 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-zinc-900 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-zinc-900 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-red-500">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition-colors">Home</a></li>
+                        <li><a href="#menu" class="text-gray-400 hover:text-red-500 transition-colors">Menu</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-red-500 transition-colors">Our Team</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-red-500 transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition-colors">Reservations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-red-500">Contact</h3>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>123 Main Street, New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <span>contact@restaurant.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-red-500">Newsletter</h3>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe to get special offers and updates.</p>
+                    <div class="flex flex-col sm:flex-row gap-2">
+                        <input 
+                            type="email" 
+                            placeholder="Your email" 
+                            class="flex-1 px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-lg text-white text-sm placeholder-gray-500 focus:outline-none focus:border-red-500"
+                        >
+                        <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-900 pt-8">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 text-sm text-center sm:text-left">
+                        © 2024 Restaurant. All rights reserved.
+                    </p>
+                    <div class="flex flex-wrap gap-6 text-sm">
+                        <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active state to navbar on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+            }
+        });
+    </script>
 </body>
 </html>
