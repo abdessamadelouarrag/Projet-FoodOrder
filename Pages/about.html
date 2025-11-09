@@ -19,6 +19,21 @@
       #font2 {
         font-family: "Sauce Tomato", sans-serif;
       }
+      .footer-heading {
+        color: #860000;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .app-store-btn {
+        transition: transform 0.2s;
+      }
+
+      .app-store-btn:hover {
+        transform: translateY(-2px);
+      }
     </style>
     <main>
       <section class="min-h-screen flex flex-col">
@@ -216,7 +231,6 @@
               <h3 class="text-white text-2xl font-bold">Chef Mouad</h3>
             </div>
 
-            <!-- Chef 2 -->
             <div class="text-center">
               <img
                 src="/assets/images/chefs/aminechef.jpg"
@@ -228,7 +242,7 @@
               </h3>
             </div>
 
-            <!-- Chef 3 -->
+          
             <div class="text-center">
               <img
                 src="/assets/images/chefs/abdessamadchef.jpg"
@@ -634,6 +648,41 @@
           </div>
         </div>
       </section>
+      <section id="brands">
+       
+      </section>
     </main>
+    <div id="footer"></div>
+
+    <script>
+      fetch("../compenents/footer.html")
+        .then((response) => {
+          if (!response.ok)
+            throw new Error(`HTTP error! status: ${response.status}`);
+          return response.text();
+        })
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        })
+        .catch((error) => {
+          console.error("Error loading footer:", error);
+          console.error("Attempted path: ../compenents/footer.html");
+        });
+
+      // brands
+      fetch("../compenents/brands.html")
+        .then((response) => {
+          if (!response.ok)
+            throw new Error(`HTTP error! status: ${response.status}`);
+          return response.text();
+        })
+        .then((data) => {
+          document.getElementById("brands").innerHTML = data;
+        })
+        .catch((error) => {
+          console.error("Error loading footer:", error);
+          console.error("Attempted path: ../compenents/brands.html");
+        });
+    </script>
   </body>
 </html>
