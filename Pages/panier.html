@@ -1,11 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Tailwind Test</title>
-  <link href="../dist/output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body class="bg-blue-700 text-white h-screen flex items-center justify-center">
-  <h1 class="text-5xl font-bold text-red-500">Tailwind Works 🎉</h1>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-sm bg-[#860000] rounded-lg shadow-2xl">
+        <!-- Header -->
+        <div class="px-4 py-3 rounded-t-lg bg-black">
+            <div class="flex items-center">
+                <div class="bg-red-600 p-2 rounded">
+                    <img src="/assets/images/shopping-cart.png" alt="shopping">
+                </div>
+                <img src="/assets/images/logo-nar.png" alt="logo" class="w-[50%] ml-16">
+            </div>
+        </div>
+
+        <div id="elemnt-ajouter">
+        </div>
+        <!-- Subtotal -->
+        <div class="px-4 pb-4 bg-[#860000]">
+          <hr class="w-full border-black">
+            <div class="flex justify-between items-center mb-3">
+                <span class="text-white text-sm font-medium">Sub Total:</span>
+                <span class="text-white text-xl font-bold">£127.90</span>
+            </div>
+
+            <!-- Total to Pay Button -->
+            <button class="w-full bg-[#fc8906c7] hover:to-yellow-700 text-wh font-bold py-3 rounded-lg mb-2 shadow-lg flex items-center justify-between px-4">
+                <span>Total to pay</span>
+                <span class="text-xl">£127.90</span>
+            </button>
+
+            <!-- Checkout Button -->
+            <button class="w-full bg-white text-[#860000] font-bold py-3 rounded-lg shadow-lg">
+                Checkout!
+            </button>
+        </div>
+    </div>
 </body>
 </html>

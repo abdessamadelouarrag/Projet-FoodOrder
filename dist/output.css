@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'MyFont';
+
+  src: url('/assets/font/Sauce Tomato.otf') format('opentype');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -552,44 +562,8 @@ video {
 
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
+<<<<<<< HEAD
 }
-
-.flex {
-  display: flex;
+=======
 }
-
-.h-screen {
-  height: 100vh;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.bg-blue-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
+>>>>>>> 2a2f803c6a44de1b8a87a61d354debaac10182a0

@@ -27,6 +27,7 @@
     font-family: 'P-Bold';
     src: url('../assets/font/Poppins-Bold.ttf');
 }
+
 .font-P-Bold{
     font-family: 'P-Bold', sans-serif;
 }
@@ -151,9 +152,13 @@
     font-family: 'P-ThinItalic', sans-serif;
 }
 
+:root {
+    --font-default: 'P-Regular', sans-serif;
+}
 
-
-
+body {
+    font-family: 'P-Regular', sans-serif;
+}
 
 
 .TX-red{
@@ -162,6 +167,9 @@
 
 .BGG-red{
     background-color: #860000
+}
+.bg-principal{
+   background-color:  #101018;
 }
 
 

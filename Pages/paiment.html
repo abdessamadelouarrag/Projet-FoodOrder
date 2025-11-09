@@ -1,11 +1,129 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
-  <title>Tailwind Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Paiment</title>
   <link href="../dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/compenents.css">
+  <link rel="stylesheet" href="../css/font-color.css">
 </head>
-<body class="bg-blue-700 text-white h-screen flex items-center justify-center">
-  <h1 class="text-5xl font-bold text-red-500">Tailwind Works 🎉</h1>
+
+<body class="bg-principal">
+  <section class="shadow-2xl bg-[#121212] text-white w-[95%] md:w-[90%] mt-6 md:mt-12 m-auto pb-6 md:pb-10"
+    id="section-commande">
+
+    <!-- IMAGE HEADER -->
+    <div  class="relative">
+      <div id="section-header" class="relative">
+      <img id="imagePaiment" src="../assets/images/home_img/background.jpg" class="w-full h-[280px] sm:h-[320px] md:h-[600px] object-cover hover:md:h-[750px] transition-all duration-[2000ms] ease-in-out" />
+
+      <h2 id="titlePaiment" class="font-sauce absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-bold text-3xl sm:text-4xl md:text-7xl uppercase hidden">
+        Order from <br><span class="uppercase text-black">food</span> Order
+      </h2>
+    </div>
+    <!-- Bouton retour -->
+    <div
+      class="absolute top-4 md:top-12 left-4 md:left-12 flex justify-center items-center bg-[#91011A] rounded-full shadow-lg cursor-pointer w-12 h-12 md:w-16 md:h-16 hover:bg-[#b91329] transition-colors duration-300">
+      <a href="../Pages/menu.html"><img src="../assets/images/icon/Vector left.png" alt="left arrow" class="w-5 h-5 md:w-7 md:h-7" /></a>
+    </div>
+
+    <!-- BODY -->
+    <div id="section-body" class="p-4 md:p-8">
+      <div id="date-time" class="flex justify-between w-full text-xs sm:text-sm md:text-base">
+        <p>06/11/2025</p>
+        <p>12:00</p>
+      </div>
+
+      <h2 class="text-white font-sauce font-bold w-full text-center text-3xl sm:text-4xl md:text-6xl mt-4">
+        <span class="text-red-800 text-3xl sm:text-4xl md:text-6xl">Commande</span> details
+      </h2>
+
+      <!-- Cards panier -->
+      <div id="cards-panier"
+        class="mx-2 md:mx-20 my-6 md:my-10 bg-white h-36 sm:h-44 md:h-56 flex gap-5 flex-col rounded-md"></div>
+
+      <!-- TOTAL -->
+      <div id="total-to-pay"
+        class="flex flex-col md:flex-row justify-between mx-2 md:mx-20 my-6 md:my-10 items-center md:items-end gap-3">
+        <div
+          class="bg-red-700 rounded-md w-48 sm:w-52 md:w-60 h-12 md:h-14 flex justify-around items-center text-sm md:text-base">
+          Total to pay <span id="total">$127.90</span>
+        </div>
+        <p class="text-xs sm:text-sm text-center md:text-left">Delivery & Tax will be calculated in the next step</p>
+      </div>
+
+      <!-- BUTTONS -->
+      <div
+        class=" md:mx-20 flex  justify-center md:flex-row items-center md:justify-center w-full md:w-96 gap-4 float-right">
+        <a href="#" class="underline font-semibold text-sm md:text-xl w-30 sm:w-44 ">Take me back</a>
+        <div role="button"
+          class="bg-red-700 rounded-md w-44 sm:w-80 md:w-60 h-12 md:h-14 flex justify-around items-center">
+          <img src="../assets/images/icon/right_Button.png" class="h-6 w-6 md:h-10 md:w-10">
+          <p class="text-lg sm:text-xl md:text-2xl font-semibold">Next Step</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULAIRE -->
+  <section id="formInfo"
+    class="shadow-2xl bg-[#91011A] text-white rounded-md flex flex-col justify-center items-center w-[95%] md:w-[90%] mt-8 md:mt-12 m-auto p-6 md:p-10">
+
+    <h3 class="font-sauce pb-6 md:pb-14 text-xl sm:text-2xl md:text-4xl">FOODORDER+</h3>
+    <p class="pb-3 text-sm md:text-base">Commander votre panier</p>
+
+    <input type="text"
+      class="bg-white rounded-md w-[95%] md:w-[90%] pl-7 text-[#555555] h-12 md:h-16 placeholder:text-[#555555] placeholder:pl-6 mb-5 md:mb-7 text-sm md:text-base"
+      placeholder="First Name" id="FirstName">
+
+    <input type="text"
+      class="bg-white rounded-md w-[95%] md:w-[90%] h-12 md:h-16 pl-7 text-[#555555] placeholder:text-[#555555] placeholder:pl-6 mb-5 md:mb-7 text-sm md:text-base"
+      placeholder="Last Name" id="LastName">
+
+    <input type="email"
+      class="bg-white rounded-md w-[95%] md:w-[90%] h-12 md:h-16 pl-7 text-[#555555] placeholder:text-[#555555] placeholder:pl-6 mb-5 md:mb-7 text-sm md:text-base"
+      placeholder="Email" id="Email">
+
+    <input type="tel"
+      class="bg-white rounded-md w-[95%] md:w-[90%] h-12 md:h-16 pl-7 text-[#555555] placeholder:text-[#555555] placeholder:pl-6 mb-5 md:mb-7 text-sm md:text-base"
+      placeholder="Phone Number">
+
+    <div class="flex w-[95%] md:w-[90%] justify-center gap-4 md:gap-9">
+      <input type="date"
+        class="bg-white rounded-md w-[50%] h-12 md:h-16 text-sm md:text-base px-2 pl-7 text-[#555555] placeholder:text-[#555555] placeholder:pl-6"
+        placeholder="Date">
+      <input type="datetime"
+        class="bg-white rounded-md w-[50%] h-12 md:h-16 text-sm md:text-base px-2 pl-7 text-[#555555] placeholder:text-[#555555] placeholder:pl-6"
+        placeholder="Time">
+    </div>
+
+    <!-- Paiement toggle -->
+    <div class="w-full md:w-[50%] flex flex-col justify-center items-center my-5">
+      <p class="pb-4 md:pb-6 text-sm md:text-base">Paiement sera :</p>
+      <div class="relative flex w-full rounded-full h-12 md:h-14 border overflow-hidden p-1">
+        <div id="bg-Paiment"
+          class="absolute top-1 bottom-1 left-1 right-1 h-auto w-[calc(50%-0.25rem)] bg-[#FC8A06] rounded-full "></div>
+        <div id="livraison" class="w-1/2 flex justify-center items-center font-semibold cursor-pointer relative z-10">
+          Livraison</div>
+        <div id="now" class="w-1/2 flex justify-center items-center font-semibold cursor-pointer relative z-10">Now
+        </div>
+      </div>
+    </div>
+
+
+    <button
+      class="w-[90%] sm:w-[60%] md:w-[50%] bg-[#FC8A06] rounded-2xl h-11 md:h-12 font-bold text-sm md:text-lg hover:text-[#FC8A06] hover:bg-white">Order
+      Now
+    </button>
+
+  </section>
+  <section id="map"></section>
+  <section id="brands"></section>
+  <footer id="footer"></footer>
+  <script src="../js/paiment.js"></script>
 </body>
+
 </html>
