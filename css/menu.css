@@ -1,0 +1,8 @@
+.trends_card::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.8;
+    background: linear-gradient( 45deg ,#03081F, transparent );
+
+}
