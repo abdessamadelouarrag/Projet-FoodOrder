@@ -8,13 +8,33 @@
   <link href="../dist/output.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/compenents.css">
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            myfont: ['MyFont', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'MyFont';
+      src: url('/assets/font/Sauce Tomato.otf') format('opentype');
+    }
+  </style>
+
 </head>
 
 <body>
 
   <section id="section-brands">
   <div class="title-similare-reseto text-center m-10">
-    <h1>Similare Resterant</h1>
+    <h1 class="font-myfont text-[25px] md:text-5xl">Similare <span class="text-[#860000]">Resterant</span></h1>
   </div>
   <div class="all-brands_here flex gap-4 m-4 relative max-w-7xl mx-auto overflow-x-auto overflow-y-hidden pb-4 snap-x  scrollbar-hide">
     <div class="brand group relative bg-[#860000] text-center rounded-2xl overflow-hidden shadow-lg min-w-[200px] w-[280px] h-64 md:w-96">
