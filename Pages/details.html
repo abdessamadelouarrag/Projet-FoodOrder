@@ -10,13 +10,33 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            myfont: ['MyFont', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'MyFont';
+      src: url('/assets/font/Sauce Tomato.otf') format('opentype');
+    }
+  </style>
+
+
 </head>
 
 <body class="bg-[#101018] w-full">
 <section>
-  <div class="all-part-details h-fit pb-14 sm:bg-[#121212] sm:mx-4 md:mx-10 lg:mx-24 mt-9 px-4 rounded-[10px]">
-    <h1 class="font-bold text-4xl sm:text-5xl lg:text-7xl text-white text-center mb-10">
-      Dish <span class="text-[#91011A]">Details</span>
+  <div class="all-part-details h-fit pb-10 sm:bg-[#121212] sm:mx-4 md:mx-10 lg:mx-24 mt-14 px-10 pt-11 rounded-[10px]">
+    <h1 class="flex justify-center items-center text-4xl sm:text-5xl lg:text-6xl text-white text-center mb-10 font-myfont gap-3">
+      Dish <span class="text-[#91011A]"> Details</span>
     </h1>
 
     <div class="card-details-food text-white bg-[#91011A] p-5 sm:p-7 lg:p-9 rounded-lg">
