@@ -68,3 +68,4 @@ function includHTML(id,file){
     .catch(err => console.log("erreur include file ", err))
 }
 includHTML("brands" , "../compenents/brands.html")
+includHTML("footer" , "../compenents/footer.html")
