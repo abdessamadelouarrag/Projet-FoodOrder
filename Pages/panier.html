@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-
-</head>
-<body class="bg-gray-900 flex items-center justify-center min-h-screen p-4">
-    <div class="w-full max-w-sm bg-[#860000] rounded-lg shadow-2xl">
+ <div class="w-full max-w-sm bg-[#860000] rounded-lg shadow-2xl h-full relative">
         <!-- Header -->
-        <div class="px-4 py-3 rounded-t-lg bg-black">
+        <div class="px-4 py-3 rounded-t-lg bg-black absolute top-0">
             <div class="flex items-center">
                 <div class="bg-red-600 p-2 rounded">
                     <img src="/assets/images/shopping-cart.png" alt="shopping">
@@ -21,16 +11,19 @@
 
         <div id="elemnt-ajouter">
         </div>
+
+
         <!-- Subtotal -->
-        <div class="px-4 pb-4 bg-[#860000]">
-          <hr class="w-full border-black">
+        <div class="px-4 pb-4 bg-[#860000] w-[300px] fixed bottom-0">
+            <hr class="w-full border-black">
             <div class="flex justify-between items-center mb-3">
                 <span class="text-white text-sm font-medium">Sub Total:</span>
                 <span class="text-white text-xl font-bold">£127.90</span>
             </div>
 
             <!-- Total to Pay Button -->
-            <button class="w-full bg-[#fc8906c7] hover:to-yellow-700 text-wh font-bold py-3 rounded-lg mb-2 shadow-lg flex items-center justify-between px-4">
+            <button
+                class="w-full bg-[#fc8906c7] hover:to-yellow-700 text-wh font-bold py-3 rounded-lg mb-2 shadow-lg flex items-center justify-between px-4">
                 <span>Total to pay</span>
                 <span class="text-xl">£127.90</span>
             </button>
@@ -41,5 +34,4 @@
             </button>
         </div>
     </div>
-</body>
-</html>
+</div>

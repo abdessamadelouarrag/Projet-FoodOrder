@@ -1,73 +1,93 @@
 <div class="fixed top-0 left-0 w-full h-[100px] z-[9999]">
-  <!-- Barre principale -->
-  <div class="flex justify-between items-center h-full px-8 bg-[#101018] text-white">
-    <a href="../index.html"><img class="w-[150px]" src="../assets/images/Nav/logo-nar.png" alt="logo foodorder+"></a>
-    <ul class="hidden md:flex gap-8">
-      <li class="hover:bg-[#91011A] px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../index.html">Home</a></li>
-      <li class="hover:bg-[#91011A] px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../Pages/menu.html">Menu</a></li>
-      <li class="hover:bg-[#91011A] px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../Pages/about.html">About US</a></li>
-    </ul>
+    <!-- Barre principale -->
+    <div class="flex justify-between items-center h-full px-8 bg-[#101018] text-white">
+      <a href="../index.html"><img class="w-[150px]" src="../assets/images/Nav/logo-nar.png" alt="logo foodorder+"></a>
+      <ul class="hidden md:flex gap-8">
+        <li class="hover:bg-[#91011A] px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../index.html">Home</a></li>
+        <li class="hover:bg-[#91011A] px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../Pages/menu.html">Menu</a>
+        </li>
+        <li class="hover:bg-[#91011A] px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../Pages/about.html">About
+            US</a></li>
+      </ul>
 
-    <div class="hidden md:flex relative">
-      <div class="h-[38px] w-[47px] bg-[#91011A] rounded-[4px]"></div>
-      <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        src="../assets/images/Nav/shopping-cart-icon.svg" alt="cart">
+      <div class="hidden md:flex relative" role="button" id="btnPanier">
+        <div class="h-[38px] w-[47px] bg-[#91011A] rounded-[4px]"></div>
+        <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          src="../assets/images/Nav/shopping-cart-icon.svg" alt="cart">
+      </div>
+
+      <button id="btn_burger" class="flex md:hidden text-4xl">☰</button>
     </div>
 
-    <button id="btn_burger" class="flex md:hidden text-4xl">☰</button>
-  </div>
+    <!-- pour hide sidebar -->
+    <div id="cover" class="hidden fixed  top-0 left-0 right-0 bottom-0 bg-[#181826]/70"></div>
 
-  <!-- pour hide sidebar -->
-  <div id="cover" class="hidden fixed  top-0 left-0 right-0 bottom-0 bg-[#181826]/10"></div>
+    <!-- Sidebar -->
+    <div id="sidebar"
+      class="fixed top-0 right-0 h-full w-[300px] bg-[#181826]/70 backdrop-blur-lg border-l border-white/20 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col items-center p-6 space-y-8">
 
-  <!-- Sidebar -->
-  <div id="sidebar" class="fixed top-0 right-0 h-full w-[300px] bg-[#181826]/70 backdrop-blur-lg border-l border-white/20 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col items-center p-6 space-y-8">
+      <!-- Logo -->
+      <img class="w-[180px]" src="../assets/images/Nav/logo-nar.png" alt="logo foodorder+">
 
-    <!-- Logo -->
-    <img class="w-[180px]" src="../assets/images/Nav/logo-nar.png" alt="logo foodorder+">
+      <!-- Panier -->
+      <div class="relative">
+        <div class="h-[40px] w-[50px] bg-[#91011A] rounded-[6px] blur-[1px] border border-[#91011A]/30"></div>
+        <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          src="../assets/images/Nav/shopping-cart-icon.svg" alt="panier">
+      </div>
 
-    <!-- Panier -->
-    <div class="relative">
-      <div class="h-[40px] w-[50px] bg-[#91011A] rounded-[6px] blur-[1px] border border-[#91011A]/30"></div>
-      <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        src="../assets/images/Nav/shopping-cart-icon.svg" alt="panier">
+      <!-- Menu -->
+      <ul class="flex flex-col gap-6 w-full text-center">
+        <li
+          class="py-2 border border-white/20 rounded-[50px] backdrop-blur-sm hover:bg-[#91011A] transition duration-300 cursor-pointer">
+          <a href="../index.html">Home</a>
+        </li>
+        <li
+          class="py-2 border border-white/20 rounded-[50px] backdrop-blur-sm hover:bg-[#91011A] transition duration-300 cursor-pointer">
+          <a href="#Menu">Menu</a>
+        </li>
+        <li
+          class="py-2 border border-white/20 rounded-[50px] backdrop-blur-sm hover:bg-[#91011A] transition duration-300 cursor-pointer">
+          <a href="../Pages/about.html">About US</a>
+        </li>
+      </ul>
+    </div>
+    <div id="panier"
+      class="fixed top-0 right-0 h-full w-[300px] bg-[#181826]/70 backdrop-blur-lg border-l border-white/20 transform translate-x-full transition-transform duration-500 ease-in-out">
+
     </div>
 
-    <!-- Menu -->
-    <ul class="flex flex-col gap-6 w-full text-center">
-      <li
-        class="py-2 border border-white/20 rounded-[50px] backdrop-blur-sm hover:bg-[#91011A] transition duration-300 cursor-pointer">
-        <a href="../index.html">Home</a>
-      </li>
-      <li
-        class="py-2 border border-white/20 rounded-[50px] backdrop-blur-sm hover:bg-[#91011A] transition duration-300 cursor-pointer">
-        <a href="#Menu">Menu</a>
-      </li>
-      <li
-        class="py-2 border border-white/20 rounded-[50px] backdrop-blur-sm hover:bg-[#91011A] transition duration-300 cursor-pointer">
-        <a href="../Pages/about.html">About US</a>
-      </li>
-    </ul>
+    <!-- Script -->
+    <script type="module">
+      import { includHTML } from '../js/globalFunctions.js';
+      
+      includHTML("panier", "../Pages/panier.html")
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const PanierBtn = document.getElementById("btnPanier");
+        const burgerBtn = document.getElementById("btn_burger");
+        const sidebar = document.getElementById("sidebar");
+        const cover = document.getElementById("cover");
+        const panierSideBar = document.getElementById("panier");
+
+        // Ouvrir  le sidebar
+        burgerBtn.addEventListener("click", () => {
+          sidebar.classList.remove("translate-x-full");
+          cover.classList.remove("hidden");
+        });
+
+        // Fermer quand on clique sur le cover
+        cover.addEventListener("click", () => {
+          sidebar.classList.add("translate-x-full");
+          panierSideBar.classList.add("translate-x-full");
+          cover.classList.add("hidden");
+        });
+
+        PanierBtn.addEventListener("click", () => {
+          panierSideBar.classList.remove("translate-x-full");
+          cover.classList.remove("hidden");
+        });
+      });
+
+    </script>
   </div>
-
-  <!-- Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const burgerBtn = document.getElementById("btn_burger");
-      const sidebar = document.getElementById("sidebar");
-      const cover = document.getElementById("cover");
-
-      // Ouvrir  le sidebar
-      burgerBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("translate-x-full");
-        cover.classList.toggle("hidden");
-      });
-
-      // Fermer quand on clique sur le cover
-      cover.addEventListener("click", () => {
-        sidebar.classList.toggle("translate-x-full");
-        cover.classList.toggle("hidden");
-      });
-    });
-  </script>
-</div>
