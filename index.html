@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-image: url("./assets/images/home_img/background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        padding: 0;
+      }
+
+      .overlay {
+        background-color: rgba(14, 14, 22, 0.86);
+      }
+
+      #hero_text {
+        background: linear-gradient(90deg, #a9291d, #260206);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      h1 {
+        font-family: "Sauce Tomato", sans-serif;
+      }
+
+      #font {
+        font-family: "Sauce Tomato", sans-serif;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .footer-heading {
+        color: #860000;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .app-store-btn {
+        transition: transform 0.2s;
+      }
+
+      .app-store-btn:hover {
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="overlay relative inset-0">
+      <section class="bg-[#101018] min-h-screen p-4 sm:p-6 lg:p-8 relative overflow-hidden">
+        <h1
+          id="hero_text"
+          class="text-center text-[3rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] leading-tight tracking-wider font-black p-2 sm:p-4"
+        >
+          SMOKY <br />
+          <span class="text-[3.5rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem]">CHEEZY</span> <br />
+          <span class="text-[4rem] sm:text-[7rem] md:text-[9rem] lg:text-[12rem]">BURGER</span>
+        </h1>
+        <img
+          src="./assets/images/home_img/carousel1.png"
+          alt="Burger"
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[20rem] sm:w-[25rem] md:w-[30rem] lg:w-[40rem] h-auto drop-shadow-[0_0_25px_rgba(0,0,0,0.8)]"
+        />
+        <div class="absolute top-[2%] right-[4%] rotate-[-19deg] w-16 sm:w-24 md:w-32 lg:w-auto">
+          <img src="./assets/images/home_img/carousel.png" alt="" class="w-full" />
+        </div>
+      </section>
+
+      <section class="min-h-screen relative mt-8 sm:mt-12 px-4 sm:px-8 lg:px-14 flex flex-col gap-8 sm:gap-11">
+        <div class="mb-12 sm:mb-16">
+          <h1 class="text-white text-2xl sm:text-3xl lg:text-4xl font-bold p-4 mb-6 sm:mb-8">
+            Today's <span class="text-[#860000]">menu</span>
+          </h1>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12">
+            <div class="bg-[#222222] rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+              <div class="flex-1 text-center sm:text-left">
+                <h2 class="text-white text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
+                  The classics for 3
+                </h2>
+                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
+                  1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
+                </p>
+                <div class="bg-red-600 text-white font-bold px-4 py-2 rounded-lg inline-block text-sm sm:text-base">
+                  MAD 23.10
+                </div>
+              </div>
+              <div class="relative flex-shrink-0">
+                <div class="w-40 h-40 sm:w-48 sm:h-48 bg-gradient-to-br rounded-2xl overflow-hidden">
+                  <img src="./assets/images/home_img/menu1.jpg" alt="" class="w-full h-full object-cover"/>
+                </div>
+                <button class="absolute bottom-0 right-0 bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 6v12m6-6H6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="bg-[#222222] rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+              <div class="flex-1 text-center sm:text-left">
+                <h2 class="text-white text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
+                  The classics for 3
+                </h2>
+                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
+                  1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
+                </p>
+                <div class="bg-red-600 text-white font-bold px-4 py-2 rounded-lg inline-block text-sm sm:text-base">
+                  MAD 23.10
+                </div>
+              </div>
+              <div class="relative flex-shrink-0">
+                <div class="w-40 h-40 sm:w-48 sm:h-48 bg-gradient-to-br rounded-2xl overflow-hidden">
+                  <img src="./assets/images/home_img/menu1.jpg" alt="" class="w-full h-full object-cover"/>
+                </div>
+                <button class="absolute bottom-0 right-0 bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 6v12m6-6H6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12 sm:mb-16">
+          <h1 class="text-white text-2xl sm:text-3xl lg:text-4xl font-bold p-4 mb-6 sm:mb-8">
+            Best <span class="text-[#860000]">Sells</span>
+          </h1>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg: gap-8">
+            <div class="bg-[#222222] rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+              <div class="flex-1 text-center sm:text-left">
+                <h2 class="text-white text-xl sm:text-2xl font-b  old mb-3 sm:mb-4">
+                  The classics for 3
+                </h2>
+                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
+                  1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
+                </p>
+                <div class="bg-red-600 text-white font-bold px-4 py-2 rounded-lg inline-block text-sm sm:text-base">
+                  MAD 23.10
+                </div>
+              </div>
+              <div class="relative flex-shrink-0">
+                <div class="w-40 h-40 sm:w-48 sm:h-48 bg-gradient-to-br rounded-2xl overflow-hidden">
+                  <img src="./assets/images/home_img/menu1.jpg" alt="" class="w-full h-full object-cover"/>
+                </div>
+                <button class="absolute bottom-0 right-0 bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 6v12m6-6H6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="bg-[#222222] rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+              <div class="flex-1 text-center sm:text-left">
+                <h2 class="text-white text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
+                  The classics for 3
+                </h2>
+                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
+                  1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
+                </p>
+                <div class="bg-red-600 text-white font-bold px-4 py-2 rounded-lg inline-block text-sm sm:text-base">
+                  MAD 23.10
+                </div>
+              </div>
+              <div class="relative flex-shrink-0">
+                <div class="w-40 h-40 sm:w-48 sm:h-48 bg-gradient-to-br rounded-2xl overflow-hidden">
+                  <img src="./assets/images/home_img/menu1.jpg" alt="" class="w-full h-full object-cover"/>
+                </div>
+                <button class="absolute bottom-0 right-0 bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 6v12m6-6H6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative min-h-[400px] sm:min-h-[500px] bg-[#3B0809] overflow-hidden mt-12 sm:mt-16 mb-12 sm:mb-16">
+        <div class="container mx-auto px-4 sm:px-8 py-12 sm:py-16 grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
+          <div class="relative order-2 md:order-1">
+            <img
+              src="./assets/images/home_img/history.png"
+              alt="Pizza slices"
+              class="relative z-10 w-full max-w-md mx-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+
+          <div class="text-white space-y-6 sm:space-y-9 order-1 md:order-2 text-center md:text-left">
+             <h2
+              id="font"
+              class=" text-6xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-red-300 items-start " style="line-height:1.5"
+            >
+              Flavor That<br />Makes History
+            </h2>
+            <p class="text-gray-200 text-base sm:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+              Every bite bold, smoky, and unforgettable. Every bite bold, smoky, and unforgettable. Every bite bold, smoky, and unforgettable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative min-h-[400px] py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-8 grid md:grid-cols-2 gap-8 sm:gap-12">
+          <div class="relative">
+            <img
+              src="./assets/images/home_img/local.jpg"
+              alt="Restaurant"
+              class="w-full rounded-3xl shadow-2xl object-cover h-[300px] sm:h-[400px] md:h-[600px]"
+            />
+          </div>
+
+          <div class="text-white space-y-4 sm:space-y-6 flex flex-col justify-center">
+            <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
+              Born from a love for good food and chill moments, our place isn't just about eating — it's about living the full experience.
+            </p>
+            <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
+ From juicy burgers and loaded fries to Moroccan-inspired twists,
+              every bite is made with fresh ingredients, a lot of passion, and
+              that local touch that makes it special. Born from a love for good
+              food and chill moments, our place isn’t just about eating — it’s
+              about living the full experience. From juicy burgers and loaded
+              fries to Moroccan-inspired twists, every bite is made with fresh
+              ingredients, a lot of passion, and that local touch that makes it
+              special. Born from a love for good food and chill moments, our
+              place isn’t just about eating — it’s about living the full
+              experience. From juicy burgers and loaded fries to
+              Moroccan-inspired twists, every bite is made with fresh
+              ingredients, a lot of passion, and that local touch that makes it
+              special.            </p>
+            <button class="bg-[#860000] hover:bg-red-800 w-full sm:w-[70%] md:w-[50%] text-white font-bold px-8 sm:px-12 py-3 rounded-full transition-colors duration-300 mt-4">
+              View more
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative py-12 sm:py-20">
+        <div class="relative z-10 px-4 sm:px-8">
+          <h2 id="font" class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-12 sm:mb-16">
+            <span class="text-white">Collaborating </span>
+            <span class="text-[#860000]">with</span>
+          </h2>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
+            <div class="bg-[#8B0000] rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform">
+              <img src="./assets/images/BRANDS/macdo.png" alt="McDonald's" class="w-full"/>
+              <div class="bg-[#8B0000] px-3 sm:px-5 py-3 sm:py-4">
+                <h2 class="text-white text-xs sm:text-sm font-bold">McDonald's London</h2>
+              </div>
+            </div>
+
+            <div class="bg-[#8B0000] rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform">
+              <img src="./assets/images/BRANDS/papajhons.png" alt="Papa Johns" class="w-full"/>
+              <div class="bg-[#8B0000] px-3 sm:px-5 py-3 sm:py-4">
+                <h2 class="text-white text-xs sm:text-sm font-bold">Papa Johns</h2>
+              </div>
+            </div>
+
+            <div class="bg-[#8B0000] rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform">
+              <img src="./assets/images/BRANDS/kfc.png" alt="KFC" class="w-full"/>
+              <div class="bg-[#8B0000] px-3 sm:px-5 py-3 sm:py-4">
+                <h2 class="text-white text-xs sm:text-sm font-bold">KFC</h2>
+              </div>
+            </div>
+
+            <div class="bg-[#8B0000] rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform">
+              <img src="./assets/images/BRANDS/texas.jpg" alt="Texas" class="w-full"/>
+              <div class="bg-[#8B0000] px-3 sm:px-5 py-3 sm:py-4">
+                <h2 class="text-white text-xs sm:text-sm font-bold">Texas Chicken</h2>
+              </div>
+            </div>
+
+            <div class="bg-[#8B0000] rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform">
+              <img src="./assets/images/BRANDS/burgerknig.jpg" alt="Burger King" class="w-full"/>
+              <div class="bg-[#8B0000] px-3 sm:px-5 py-3 sm:py-4">
+                <h2 class="text-white text-xs sm:text-sm font-bold">Burger King</h2>
+              </div>
+            </div>
+
+            <div class="bg-[#8B0000] rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform">
+              <img src="./assets/images/BRANDS/shaurma.png" alt="Shawarma" class="w-full"/>
+              <div class="bg-[#8B0000] px-3 sm:px-5 py-3 sm:py-4">
+                <h2 class="text-white text-xs sm:text-sm font-bold">Shawarma Plus</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative w-full min-h-screen overflow-hidden py-12 sm:py-16 lg:py-24">
+        <div class="container mx-auto px-4 sm:px-8">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+              <img
+                src="./assets/images/home_img/order.png"
+                alt="Crispy Fried Chicken"
+                class="w-full h-auto object-cover rounded-lg max-w-md mx-auto"
+              />
+            </div>
+
+            <div class="flex flex-col gap-8 sm:gap-12 order-1 md:order-2 text-center md:text-left">
+              <div class="md:-rotate-12">
+                <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-black text-yellow-400 leading-none mb-4 transform -rotate-3">
+                  Order
+                </h1>
+                <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-black text-yellow-500 leading-none transform rotate-2">
+                  now
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-12 sm:py-16">
+        <h2 id="font" class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-12 sm:mb-16">
+          <span class="text-white">Customer </span>
+          <span class="text-[#860000]">reviews</span>
+        </h2>
+        
+        <div class="w-full px-4 sm:px-8">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-lg">
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="./assets/images/home_img/téléchargement (13).jpg" alt="St Gix" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"/>
+                  <div>
+                    <h3 class="font-bold text-gray-900 text-sm sm:text-base">St Gix</h3>
+                    <p class="text-xs sm:text-sm text-gray-600">South London</p>
+                  </div>
+                </div>
+                <div class="flex gap-0.5 sm:gap-1">
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-yellow-500 w-4"><img src="./assets/images/home_img/watch.png" alt=""/></span>
+                <span class="text-xs sm:text-sm text-gray-600">24th September, 2023</span>
+              </div>
+              <p class="text-gray-700 leading-relaxed text-xs sm:text-sm">
+                The positive aspect was undoubtedly the efficiency of the service. The queue moved quickly, the staff was friendly, and the food was up to the usual McDonald's standard – hot and satisfying.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-lg">
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="./assets/images/home_img/téléchargement (8).jpg" alt="St Gix" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"/>
+                  <div>
+                    <h3 class="font-bold text-gray-900 text-sm sm:text-base">St Gix</h3>
+                    <p class="text-xs sm:text-sm text-gray-600">South London</p>
+                  </div>
+                </div>
+                <div class="flex gap-0.5 sm:gap-1">
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-yellow-500 w-4"><img src="./assets/images/home_img/watch.png" alt=""/></span>
+                <span class="text-xs sm:text-sm text-gray-600">24th September, 2023</span>
+              </div>
+              <p class="text-gray-700 leading-relaxed text-xs sm:text-sm">
+                The positive aspect was undoubtedly the efficiency of the service. The queue moved quickly, the staff was friendly, and the food was up to the usual McDonald's standard – hot and satisfying.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-lg">
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="./assets/images/home_img/téléchargement (9).jpg" alt="St Gix" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"/>
+                  <div>
+                    <h3 class="font-bold text-gray-900 text-sm sm:text-base">St Gix</h3>
+                    <p class="text-xs sm:text-sm text-gray-600">South London</p>
+                  </div>
+                </div>
+                <div class="flex gap-0.5 sm:gap-1">
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-yellow-500 w-4"><img src="./assets/images/home_img/watch.png" alt=""/></span>
+                <span class="text-xs sm:text-sm text-gray-600">24th September, 2023</span>
+              </div>
+              <p class="text-gray-700 leading-relaxed text-xs sm:text-sm">
+                The positive aspect was undoubtedly the efficiency of the service. The queue moved quickly, the staff was friendly, and the food was up to the usual McDonald's standard – hot and satisfying.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-8 sm:pt-10 md:pt-12 pb-6 sm:pb-8">
+        <div class="lg:hidden">
+          <div class="text-center mb-8">
+            <div class="flex justify-center items-center gap-1 mb-6">
+              <img src="./assets/images/Footer/LOGO 2.png" alt="Logo" class="max-w-[120px] sm:max-w-[150px]"/>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-3 mb-6">
+              <a href="#" class="app-store-btn block">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" class="h-9 w-auto mx-auto"/>
+              </a>
+              <a href="#" class="app-store-btn block">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-9 w-auto mx-auto"/>
+              </a>
+            </div>
+
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Company # 490039-445, Registered with House of companies.
+            </p>
+          </div>
+
+          <div class="text-center mb-8">
+            <h3 class="footer-heading text-center">Get Exclusive Deals in your Inbox</h3>
+            <div class="flex mb-3 max-w-md mx-auto">
+              <input type="email" placeholder="youremail@gmail.com" class="flex-1 px-3 sm:px-4 py-2.5 rounded-l-full bg-white text-gray-900 text-xs sm:text-sm placeholder-gray-400 focus:outline-none"/>
+              <button class="bg-[#860000] px-4 sm:px-6 py-2.5 rounded-r-full text-white font-medium text-xs sm:text-sm hover:bg-red-700 transition-colors whitespace-nowrap">
+                Subscribe
+              </button>
+            </div>
+            <p class="text-gray-400 text-xs mb-6">
+              we wont spam, read our <a href="#" class="text-gray-400 underline hover:text-white">email policy</a>
+            </p>
+
+            <div class="flex gap-3 justify-center">
+              <a href="#" class="w-9 h-9 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors border border-gray-800">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="#" class="w-9 h-9 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors border border-gray-800">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="#" class="w-9 h-9 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors border border-gray-800">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                </svg>
+              </a>
+              <a href="#" class="w-9 h-9 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors border border-gray-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center mb-6">
+            <h3 class="footer-heading text-center">Legal Pages</h3>
+            <ul class="space-y-2.5 text-sm">
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Terms and conditions</a></li>
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Privacy</a></li>
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Cookies</a></li>
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Modern Slavery Statement</a></li>
+            </ul>
+          </div>
+
+          <div class="text-center">
+            <h3 class="footer-heading text-center">Important Links</h3>
+            <ul class="space-y-2.5 text-sm">
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Get help</a></li>
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Add your restaurant</a></li>
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Sign up to deliver</a></li>
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Create a business account</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hidden lg:grid grid-cols-5 gap-8">
+          <div>
+            <div class="flex items-center gap-1 mb-6">
+              <img src="./assets/images/Footer/LOGO 2.png" alt="Logo" class="max-w-[150px]"/>
+            </div>
+            <div class="flex gap-3 mb-6">
+              <a href="#" class="app-store-btn block">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" class="h-10 w-auto"/>
+              </a>
+              <a href="#" class="app-store-btn block">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-10 w-auto"/>
+              </a>
+            </div>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Company # 490039-445, Registered with<br />House of companies.
+            </p>
+          </div>
+
+          <div class="col-span-2 flex flex-col justify-center">
+            <h3 class="footer-heading">Get Exclusive Deals in your Inbox</h3>
+            <div class="flex mb-3">
+              <input type="email" placeholder="youremail@gmail.com" class="flex-1 px-4 py-2.5 rounded-l-full bg-white text-gray-900 text-sm placeholder-gray-400 focus:outline-none"/>
+              <button class="bg-[#860000] px-6 py-2.5 rounded-r-full text-white font-medium text-sm hover:bg-red-700 transition-colors">
+                Subscribe
+              </button>
+            </div>
+            <div class="">
+              <p class="text-gray-400 text-xs mb-6">
+                we wont spam, read our <a href="#" class="text-gray-400 underline hover:text-white">email policy</a>
+              </p>
+              <div class="flex gap-3">
+                <a href="#" class="w-9 h-9 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors border border-gray-800">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+                <a href="#" class="w-9 h-9 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors border border-gray-800">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </a>
+                <a href="#" class="w-9 h-9 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors border border-gray-800">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                  </svg>
+                </a>
+                <a href="#" class="w-9 h-9 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors border border-gray-800">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Legal Pages</h3>
+            <ul class="space-y-2.5 text-sm">
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Terms and conditions</a></li>
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Privacy</a></li>
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Cookies</a></li>
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Modern Slavery Statement</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Important Links</h3>
+            <ul class="space-y-2.5 text-sm">
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Get help</a></li>
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Add your restaurant</a></li>
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Sign up to deliver</a></li>
+              <li><a href="#" class="text-white hover:text-red-500 transition-colors">Create a business account</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#860000] py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white">
+          <p class="text-center md:text-left">Order.uk Copyright 2024, All Rights Reserved.</p>
+          <div class="flex flex-wrap gap-4 sm:gap-6 justify-center text-center">
+            <a href="#" class="hover:underline">Privacy Policy</a>
+            <a href="#" class="hover:underline">Terms</a>
+            <a href="#" class="hover:underline">Pricing</a>
+            <a href="#" class="hover:underline whitespace-nowrap">Do not sell or share my personal information</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
