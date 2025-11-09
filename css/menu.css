@@ -2,7 +2,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    opacity: 0.8;
-    background: linear-gradient( 45deg ,#03081F, transparent );
+    opacity: 1;
+    background: linear-gradient( -135deg  , transparent 0% , #03081F80 58% , #03081F 100% );
 
 }
