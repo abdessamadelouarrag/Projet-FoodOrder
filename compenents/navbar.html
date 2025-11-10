@@ -59,9 +59,9 @@
 
     <!-- Script -->
     <script type="module">
-      import { includHTML } from '../js/globalFunctions.js';
-      
-      includHTML("panier", "../Pages/panier.html")
+      import { Panier } from '../js/fetchComponents.js';
+
+      document.getElementById("panier").innerHTML = Panier();
 
       document.addEventListener("DOMContentLoaded", () => {
         const PanierBtn = document.getElementById("btnPanier");

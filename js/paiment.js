@@ -1,14 +1,6 @@
-function includHTML(id, file) {
-    fetch(file)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById(id).innerHTML = data;
-        })
-        .catch(err => console.log("erreur include file ", err))
-}
-includHTML("footer", "../compenents/footer.html")
-includHTML("brands", "../compenents/brands.html")
-includHTML("map", "../compenents/cardGoogleMap.html")
+import { Footer } from '../js/fetchComponents.js';
+
+document.getElementById("footer").innerHTML = Footer();
 
 const btnLivraison = document.getElementById('livraison');
 const btnNow = document.getElementById('now');
