@@ -98,26 +98,26 @@ export function Panier(){
     </div>
 </div>`
 }
-export function CardMenu(){
+export function CardMenu(produit){
     return `<div
     class="bg-[#222222] rounded-2xl p-4 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 max-w-xs sm:max-w-md md:max-w-lg mx-auto">
     <div class="flex-1 text-center sm:text-left">
         <h2 class="text-white text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">
-            Pack For Squad
+            ${produit.name}
         </h2>
         <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
-            1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
+            ${produit.description}
         </p>
         <div class="bg-red-600 text-white font-bold px-3 py-2 rounded-lg inline-block text-xs sm:text-sm">
-            40 MAD
+            ${produit.price} MAD
         </div>
     </div>
 
     <div class="relative ">
         <div class="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-2xl overflow-hidden">
-            <img src="../assets/images/home_img/menu1.jpg" alt="menu" class="w-full h-full object-cover">
+            <img src="${produit.image}" alt="menu" class="w-full h-full object-cover" >
 
-            <button class="absolute bottom-0 right-0 
+            <button id="btnPanier" class="absolute bottom-0 right-0 
                bg-white text-black w-10 h-10 sm:w-12 sm:h-12 
                flex items-center justify-center shadow-lg 
                rounded-tl-2xl rounded-tr-none rounded-bl-none rounded-br-none
