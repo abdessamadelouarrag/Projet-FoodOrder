@@ -57,15 +57,3 @@ minusPriceValue.addEventListener('click', () => {
         totalPrice.textContent = valuePrice;
     }
 });
-
-
-function includHTML(id,file){
-    fetch(file)
-    .then(response => response.text())
-    .then(data=>{
-        document.getElementById(id).innerHTML = data ; 
-    })
-    .catch(err => console.log("erreur include file ", err))
-}
-includHTML("brands" , "../compenents/brands.html")
-includHTML("footer" , "../compenents/footer.html")

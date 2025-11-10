@@ -19,7 +19,25 @@
       #font2 {
         font-family: "Sauce Tomato", sans-serif;
       }
+      .footer-heading {
+        color: #860000;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .app-store-btn {
+        transition: transform 0.2s;
+      }
+
+      .app-store-btn:hover {
+        transform: translateY(-2px);
+      }
     </style>
+    <header>
+      <nav id="navbar"></nav>
+    </header>
     <main>
       <section class="min-h-screen flex flex-col">
         <div
@@ -216,7 +234,6 @@
               <h3 class="text-white text-2xl font-bold">Chef Mouad</h3>
             </div>
 
-            <!-- Chef 2 -->
             <div class="text-center">
               <img
                 src="/assets/images/chefs/aminechef.jpg"
@@ -228,7 +245,7 @@
               </h3>
             </div>
 
-            <!-- Chef 3 -->
+          
             <div class="text-center">
               <img
                 src="/assets/images/chefs/abdessamadchef.jpg"
@@ -634,6 +651,11 @@
           </div>
         </div>
       </section>
+      <section id="map"></section>
+      <section id="brands"></section>
     </main>
+    <footer  id="footer"></footer>
+    <script type="module" src="../js/fetchComponents.js"></script>
+
   </body>
 </html>
