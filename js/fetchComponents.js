@@ -57,41 +57,7 @@ export function Navbar(){
       class="fixed top-0 right-0 h-full w-[300px] bg-[#181826]/70 backdrop-blur-lg border-l border-white/20 transform translate-x-full transition-transform duration-500 ease-in-out">
 
     </div>
-
-    <!-- Script -->
-    <script type="module">
-      import { Panier } from '../js/fetchComponents.js';
-
-      document.getElementById("panier").innerHTML = Panier();
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const PanierBtn = document.getElementById("btnPanier");
-        const burgerBtn = document.getElementById("btn_burger");
-        const sidebar = document.getElementById("sidebar");
-        const cover = document.getElementById("cover");
-        const panierSideBar = document.getElementById("panier");
-
-        // Ouvrir  le sidebar
-        burgerBtn.addEventListener("click", () => {
-          sidebar.classList.remove("translate-x-full");
-          cover.classList.remove("hidden");
-        });
-
-        // Fermer quand on clique sur le cover
-        cover.addEventListener("click", () => {
-          sidebar.classList.add("translate-x-full");
-          panierSideBar.classList.add("translate-x-full");
-          cover.classList.add("hidden");
-        });
-
-        PanierBtn.addEventListener("click", () => {
-          panierSideBar.classList.remove("translate-x-full");
-          cover.classList.remove("hidden");
-        });
-      });
-
-    </script>
-  </div>`
+  </div>`;
 }
 export function Panier(){
     return ` <div class="w-full max-w-sm bg-[#860000] rounded-lg shadow-2xl h-full relative">
@@ -412,4 +378,54 @@ export function CardPaiment(){
     </div>
 </div>`
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("navbar").innerHTML = Navbar();
+document.getElementById("panier").innerHTML = Panier();
+document.getElementById("footer").innerHTML = Footer();
+document.getElementById("map").innerHTML = Map();
+document.getElementById("brands").innerHTML = Brands();
+
+//code js Navbar
+document.addEventListener("DOMContentLoaded", () => {
+  const PanierBtn = document.getElementById("btnPanier");
+  const burgerBtn = document.getElementById("btn_burger");
+  const sidebar = document.getElementById("sidebar");
+  const cover = document.getElementById("cover");
+  const panierSideBar = document.getElementById("panier");
+
+  if (!PanierBtn || !burgerBtn || !sidebar || !cover || !panierSideBar) {
+    console.error(" Un des éléments du DOM est introuvable !");
+    return;
+  }
+
+  burgerBtn.addEventListener("click", () => {
+    sidebar.classList.remove("translate-x-full");
+    cover.classList.remove("hidden");
+  });
+
+  cover.addEventListener("click", () => {
+    sidebar.classList.add("translate-x-full");
+    panierSideBar.classList.add("translate-x-full");
+    cover.classList.add("hidden");
+  });
+
+  PanierBtn.addEventListener("click", () => {
+    console.log("🛒 Bouton panier cliqué !");
+    panierSideBar.classList.remove("translate-x-full");
+    cover.classList.remove("hidden");
+  });
+});
+
 
