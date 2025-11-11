@@ -56,7 +56,7 @@ export function Navbar(){
     <div id="panier"
       class="fixed top-0 right-0 h-full w-[300px] bg-[#181826]/70 backdrop-blur-lg border-l border-white/20 transform translate-x-full transition-transform duration-500 ease-in-out">
 
-    </div>J
+    </div>
   </div>
   <div class="h-100"></div>
   `;
@@ -640,40 +640,42 @@ export function Brands(){
   </style>
 </div>`
 }
-export function CardPaiment(){
+export function CardPaiment(produit){
     return `<div id="CardPaiement"
-    class="grid grid-cols-9 gap-4 items-center bg-[#91011A] w-[100%] rounded-2xl max-w-5xl h-44 p-4 shadow-lg">
+  class="mx-auto grid grid-cols-9 gap-2 items-center bg-[#91011A] w-full rounded-2xl max-w-5xl h-auto p-3 shadow-md overflow-hidden">
 
-    <div class="col-span-2 flex justify-center items-center">
-        <img src="../assets/images/imagesCardPaiment/imgCardPaiment.png" alt="image pizza"
-            class="rounded-full object-cover w-28 h-28 max-sm:w-16 max-sm:h-16 sm:w-32 sm:h-32" id="imgCardPaiement">
+  <div class="col-span-2 flex justify-center items-center">
+    <img src="${produit.image}" alt="image pizza"
+      class="rounded-full object-cover w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" id="imgCardPaiement">
+  </div>
+
+  <div class="col-span-5 flex flex-col text-white overflow-hidden">
+    <div class="flex items-center mb-2 gap-2 flex-wrap">
+      <h2 class="font-semibold text-sm sm:text-base md:text-lg truncate">Margareta</h2>
+      <div class="bg-[#D02A2A] px-2 py-0.5 rounded-md text-xs sm:text-sm">
+        <p class="font-semibold">
+          MAD <span id="prix-initial">${produit.price}</span>
+        </p>
+      </div>
     </div>
 
-    <div class="col-span-5 flex flex-col text-white">
-        <div class="flex  items-center mb-3">
-            <h2 class="font-bold text-xl lg:text-2xl">Margareta</h2>
-            <div class="bg-[#D02A2A] px-3 py-1 rounded-md">
-                <p class="font-semibold">
-                    MAD <span id="prix-initial" class="font-semibold">23.90</span>
-                </p>
-            </div>
-        </div>
+    <p id="description" class="text-[10px] sm:text-xs md:text-sm leading-snug line-clamp-2">
+      ${produit.description}
+    </p>
+  </div>
 
-        <p id="description" class="text-sm lg:text-base leading-snug">1 McChicken™, 1 Big Mac™, 1 RoyalCheeseburger, 3 medium sized French Fries, 3 cold drinks.</p>
-    </div>
+  <div class="col-span-2 flex justify-center items-center gap-2">
+    <!-- Bouton - -->
+      <img src="../assets/images/icon/-icon.svg" class="w-[90px] sm:w-[10px] md:w-[20px]" alt="icon minus">
 
-    <div class="col-span-2 flex justify-center items-center gap-3">
-        <button class="bg-white text-[#91011A] rounded-full flex items-center justify-center shadow hover:bg-gray-200 w-10 h-10 max-sm:w-7 max-sm:h-7">
-            <img src="../assets/images/icon/-icon.svg" class="max-sm:w-3" alt="icon minus">
-        </button>
-        
-        <input type="text" value="1" class="text-center rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#D02A2A]w-12 h-10 max-sm:w-8 max-sm:h-7 max-sm:text-sm">
+    <input type="text" value="1"
+      class="text-center rounded-md border border-gray-300 text-black w-8 sm:w-10 h-7 sm:h-8 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#D02A2A]">
 
-        <button class="bg-white text-[#91011A] rounded-full flex items-center justify-center shadow hover:bg-gray-200w-10 h-10 max-sm:w-7 max-sm:h-7">
-            <img src="../assets/images/icon/+_icon.svg" class="max-sm:w-3" alt="icon plus">
-        </button>
-    </div>
-</div>`
+      <img src="../assets/images/icon/+_icon.svg" class="w-[90px] sm:w-[10px] md:w-[20px]" alt="icon plus">
+  </div>
+</div>
+
+`
 }
 
 
@@ -729,7 +731,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   PanierBtn.addEventListener("click", () => {
-    console.log("🛒 Bouton panier cliqué !");
+    console.log(" Bouton panier cliqué !");
     panierSideBar.classList.remove("translate-x-full");
     cover.classList.remove("hidden");
   });

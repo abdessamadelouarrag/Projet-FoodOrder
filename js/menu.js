@@ -14,7 +14,6 @@ function updatePlaceholder(e) {
 updatePlaceholder(phoneMediaQuery);
 phoneMediaQuery.addEventListener('change',updatePlaceholder);
 const container = document.getElementById("menu_container");
-
 let listProduit = JSON.parse(localStorage.getItem("produits")) || [];
 fetch("../data/data.json")
 .then(res => res.json())
@@ -24,10 +23,12 @@ fetch("../data/data.json")
         card.id = e.id
         card.innerHTML = CardMenu(e)
         let btnPanier = card.querySelector("#btnPanier")
-        card.addEventListener("click" , ()=>{
+        let cardClick = card.querySelector("div")
+        cardClick.addEventListener("click" , ()=>{
             window.location.href = `../Pages/details.html?id=${e.id}`;
         })
-        btnPanier.addEventListener("click" , ()=>{
+        btnPanier.addEventListener("click" , (event)=>{
+            event.stopPropagation();
             let exist = false 
             //
             listProduit.forEach(p=>{
