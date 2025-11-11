@@ -5,98 +5,178 @@
     "category": "Plat",
     "description": "Pizza traditionnelle avec sauce tomate, mozzarella et basilic frais.",
     "price": 8.99,
-    "image": "https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg",
-    "size": ["S", "M", "L", "XL"],
-    "availability": true
+    "image": "https://example.com/images/pizza-margherita.jpg",
+    "size": ["S", "M", "L", "XL"]
   },
   {
     "id": 2,
-    "name": "Burger Classique",
+    "name": "Pizza Quatre Fromages",
     "category": "Plat",
-    "description": "Pain brioché, steak haché, fromage cheddar, salade et tomate.",
-    "price": 9.49,
-    "image": "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.jpg",
-    "size": ["S", "M", "L"],
-    "availability": true
+    "description": "Mélange gourmand de mozzarella, gorgonzola, parmesan et chèvre.",
+    "price": 11.99,
+    "image": "https://example.com/images/pizza-quatre-fromages.jpg",
+    "size": ["S", "M", "L", "XL"]
   },
   {
     "id": 3,
-    "name": "Salade César",
-    "category": "Entrée",
-    "description": "Salade romaine, poulet grillé, parmesan, croûtons et sauce César.",
-    "price": 7.25,
-    "image": "https://cdn.pixabay.com/photo/2016/03/05/19/02/salad-1238248_1280.jpg",
-    "size": ["M", "L"],
-    "availability": true
+    "name": "Pizza Pepperoni",
+    "category": "Plat",
+    "description": "Pizza classique avec sauce tomate, mozzarella et généreuses tranches de pepperoni.",
+    "price": 10.49,
+    "image": "https://example.com/images/pizza-pepperoni.jpg",
+    "size": ["S", "M", "L", "XL"]
   },
   {
     "id": 4,
-    "name": "Pâtes Carbonara",
+    "name": "Burger Classique",
     "category": "Plat",
-    "description": "Spaghetti crémeux avec lardons, œuf et parmesan.",
-    "price": 10.50,
-    "image": "https://cdn.pixabay.com/photo/2017/09/02/13/25/spaghetti-2701814_1280.jpg",
-    "size": ["S", "M", "L"],
-    "availability": true
+    "description": "Steak haché 180g, salade, tomate, oignon, cornichons et sauce maison.",
+    "price": 12.99,
+    "image": "https://example.com/images/burger-classique.jpg",
+    "size": ["Normal", "Double"]
   },
   {
     "id": 5,
-    "name": "Soupe à l’oignon",
-    "category": "Entrée",
-    "description": "Soupe traditionnelle française gratinée au fromage.",
-    "price": 5.99,
-    "image": "https://cdn.pixabay.com/photo/2018/02/14/10/14/soup-3158089_1280.jpg",
-    "size": ["S", "M"],
-    "availability": true
+    "name": "Burger Bacon",
+    "category": "Plat",
+    "description": "Steak haché, bacon croustillant, cheddar fondu, oignons caramélisés et sauce BBQ.",
+    "price": 14.49,
+    "image": "https://example.com/images/burger-bacon.jpg",
+    "size": ["Normal", "Double"]
   },
   {
     "id": 6,
-    "name": "Crêpe Nutella",
-    "category": "Dessert",
-    "description": "Crêpe sucrée garnie de Nutella et de sucre glace.",
-    "price": 4.50,
-    "image": "https://cdn.pixabay.com/photo/2017/03/24/13/48/crepes-2178873_1280.jpg",
-    "size": ["S", "M"],
-    "availability": true
+    "name": "Salade César",
+    "category": "Entrée",
+    "description": "Laitue romaine, poulet grillé, croûtons, parmesan et sauce César crémeuse.",
+    "price": 9.99,
+    "image": "https://example.com/images/salade-cesar.jpg",
+    "size": ["Normal", "Grande"]
   },
   {
     "id": 7,
-    "name": "Tiramisu",
-    "category": "Dessert",
-    "description": "Dessert italien au café, mascarpone et cacao.",
-    "price": 5.25,
-    "image": "https://cdn.pixabay.com/photo/2016/11/29/03/28/tiramisu-1869658_1280.jpg",
-    "size": ["S", "M"],
-    "availability": true
+    "name": "Salade Niçoise",
+    "category": "Entrée",
+    "description": "Thon, œufs, haricots verts, tomates, olives, anchois et vinaigrette.",
+    "price": 10.99,
+    "image": "https://example.com/images/salade-nicoise.jpg",
+    "size": ["Normal", "Grande"]
   },
   {
     "id": 8,
-    "name": "Steak Frites",
+    "name": "Pâtes Carbonara",
     "category": "Plat",
-    "description": "Steak grillé accompagné de frites croustillantes.",
-    "price": 12.90,
-    "image": "https://cdn.pixabay.com/photo/2017/04/23/18/58/steak-2259269_1280.jpg",
-    "size": ["M", "L", "XL"],
-    "availability": true
+    "description": "Spaghetti crémeux aux lardons, jaune d'œuf, parmesan et poivre noir.",
+    "price": 11.49,
+    "image": "https://example.com/images/pates-carbonara.jpg",
+    "size": ["Normal", "Grande"]
   },
   {
     "id": 9,
-    "name": "Poulet Curry",
+    "name": "Pâtes Bolognaise",
     "category": "Plat",
-    "description": "Poulet mijoté dans une sauce au curry doux et lait de coco.",
-    "price": 11.75,
-    "image": "https://cdn.pixabay.com/photo/2017/05/07/08/56/curry-2297201_1280.jpg",
-    "size": ["S", "M", "L"],
-    "availability": true
+    "description": "Spaghetti avec sauce tomate maison, viande hachée et herbes italiennes.",
+    "price": 10.99,
+    "image": "https://example.com/images/pates-bolognaise.jpg",
+    "size": ["Normal", "Grande"]
   },
   {
     "id": 10,
-    "name": "Mousse au chocolat",
+    "name": "Tacos Poulet",
+    "category": "Plat",
+    "description": "Trois tacos avec poulet mariné, guacamole, salsa et crème fraîche.",
+    "price": 9.49,
+    "image": "https://example.com/images/tacos-poulet.jpg",
+    "size": ["3 pièces", "5 pièces"]
+  },
+  {
+    "id": 11,
+    "name": "Wrap Végétarien",
+    "category": "Plat",
+    "description": "Tortilla garnie de légumes grillés, houmous, feta et roquette.",
+    "price": 8.49,
+    "image": "https://example.com/images/wrap-vegetarien.jpg",
+    "size": ["Normal"]
+  },
+  {
+    "id": 12,
+    "name": "Soupe à l'Oignon",
+    "category": "Entrée",
+    "description": "Soupe gratinée traditionnelle avec oignons caramélisés et fromage fondu.",
+    "price": 6.99,
+    "image": "https://example.com/images/soupe-oignon.jpg",
+    "size": ["Normal", "Grande"]
+  },
+  {
+    "id": 13,
+    "name": "Tiramisu",
     "category": "Dessert",
-    "description": "Mousse légère au chocolat noir, servie fraîche.",
-    "price": 4.99,
-    "image": "https://cdn.pixabay.com/photo/2017/03/17/10/07/chocolate-mousse-2151991_1280.jpg",
-    "size": ["S", "M"],
-    "availability": true
+    "description": "Dessert italien aux biscuits imbibés de café, mascarpone et cacao.",
+    "price": 5.99,
+    "image": "https://example.com/images/tiramisu.jpg",
+    "size": ["Normal"]
+  },
+  {
+    "id": 14,
+    "name": "Tarte Tatin",
+    "category": "Dessert",
+    "description": "Tarte aux pommes caramélisées servie tiède avec crème fraîche.",
+    "price": 6.49,
+    "image": "https://example.com/images/tarte-tatin.jpg",
+    "size": ["Normal"]
+  },
+  {
+    "id": 15,
+    "name": "Crème Brûlée",
+    "category": "Dessert",
+    "description": "Crème onctueuse à la vanille avec croûte caramélisée craquante.",
+    "price": 5.49,
+    "image": "https://example.com/images/creme-brulee.jpg",
+    "size": ["Normal"]
+  },
+  {
+    "id": 16,
+    "name": "Poulet Rôti",
+    "category": "Plat",
+    "description": "Demi-poulet rôti aux herbes, accompagné de frites et salade.",
+    "price": 13.99,
+    "image": "https://example.com/images/poulet-roti.jpg",
+    "size": ["Demi", "Entier"]
+  },
+  {
+    "id": 17,
+    "name": "Fish and Chips",
+    "category": "Plat",
+    "description": "Filet de poisson pané croustillant avec frites maison et sauce tartare.",
+    "price": 12.49,
+    "image": "https://example.com/images/fish-chips.jpg",
+    "size": ["Normal", "Grande"]
+  },
+  {
+    "id": 18,
+    "name": "Coca-Cola",
+    "category": "Boisson",
+    "description": "Boisson gazeuse rafraîchissante classique.",
+    "price": 2.99,
+    "image": "https://example.com/images/coca-cola.jpg",
+    "size": ["33cl", "50cl", "1L"]
+  },
+  {
+    "id": 19,
+    "name": "Jus d'Orange Pressé",
+    "category": "Boisson",
+    "description": "Jus d'orange fraîchement pressé, 100% naturel.",
+    "price": 4.49,
+    "image": "https://example.com/images/jus-orange.jpg",
+    "size": ["25cl", "50cl"]
+  },
+  {
+    "id": 20,
+    "name": "Café Espresso",
+    "category": "Boisson",
+    "description": "Expresso italien corsé et aromatique.",
+    "price": 2.49,
+    "image": "https://example.com/images/cafe-espresso.jpg",
+    "size": ["Simple", "Double"]
   }
 ]
