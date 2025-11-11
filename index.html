@@ -85,55 +85,13 @@
             Today's <span class="text-[#860000]">menu</span>
           </h1>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12">
-            <div class="bg-[#222222] rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-              <div class="flex-1 text-center sm:text-left">
-                <h2 class="text-white text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-                  The classics for 3
-                </h2>
-                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
-                  1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
-                </p>
-                <div class="bg-red-600 text-white font-bold px-4 py-2 rounded-lg inline-block text-sm sm:text-base">
-                  MAD 23.10
-                </div>
-              </div>
-              <div class="relative flex-shrink-0">
-                <div class="w-40 h-40 sm:w-48 sm:h-48 bg-gradient-to-br rounded-2xl overflow-hidden">
-                  <img src="./assets/images/home_img/menu1.jpg" alt="" class="w-full h-full object-cover"/>
-                </div>
-                <button class="absolute bottom-0 right-0 bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 6v12m6-6H6"/>
-                  </svg>
-                </button>
-              </div>
-            </div>
+           <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-6 lg:gap-12">
+           
 
-            <div class="bg-[#222222] rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-              <div class="flex-1 text-center sm:text-left">
-                <h2 class="text-white text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-                  The classics for 3
-                </h2>
-                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
-                  1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
-                </p>
-                <div class="bg-red-600 text-white font-bold px-4 py-2 rounded-lg inline-block text-sm sm:text-base">
-                  MAD 23.10
-                </div>
-              </div>
-              <div class="relative flex-shrink-0">
-                <div class="w-40 h-40 sm:w-48 sm:h-48 bg-gradient-to-br rounded-2xl overflow-hidden">
-                  <img src="./assets/images/home_img/menu1.jpg" alt="" class="w-full h-full object-cover"/>
-                </div>
-                <button class="absolute bottom-0 right-0 bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 6v12m6-6H6"/>
-                  </svg>
-                </button>
-              </div>
+            <div id="cards" class="flex flex-row gap-6">
+           
             </div>
-          </div>
+          </div> 
         </div>
 
         <div class="mb-12 sm:mb-16">
@@ -141,7 +99,7 @@
             Best <span class="text-[#860000]">Sells</span>
           </h1>
 
-          <div class="grid grid-cols-1 md:grid-cols-2  lg: gap-8">
+          <!-- <div class="grid grid-cols-1 md:grid-cols-2  lg: gap-8">
             <div class="bg-[#222222] rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
               <div class="flex-1 text-center sm:text-left">
                 <h2 class="text-white text-xl sm:text-2xl font-b  old mb-3 sm:mb-4">
@@ -189,7 +147,7 @@
                 </button>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
@@ -372,12 +330,54 @@
         </div>
       </section>
       <section id="map"></section>
-
+      
     </main>
 
     <footer id="footer">
 
     </footer>
     <script type="module" src="./js/fetchComponents.js"></script>
+    <script>
+      fetch('/data/data.json')
+      .then(response => response.json())
+      .then(data =>{
+        const card_container = document.getElementById('cards');
+        console.log(data);
+        data.forEach(e => {
+           const card = document.createElement('div');
+           card.innerHTML = `
+           <div class="bg-[#222222] rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+              <div class="flex-1 text-center sm:text-left">
+                <h2 class="text-white text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
+                  ${e.name}
+                </h2>
+                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
+                  ${e.description}
+                  </p>
+                <div class="bg-red-600 text-white font-bold px-4 py-2 rounded-lg inline-block text-sm sm:text-base">
+                 ${e.price}
+                </div>
+              </div>
+              <div class="relative flex-shrink-0">
+                <div class="w-40 h-40 sm:w-48 sm:h-48 bg-gradient-to-br rounded-2xl overflow-hidden">
+                  ${e.image}
+                  </div>
+                <button class="absolute bottom-0 right-0 bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 6v12m6-6H6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+           `;
+           card_container.appendChild(card);
+
+        });
+      })
+      .catch(err => console.error('hna kayn mochkile:' , err));
+      
+
+    
+    </script>
   </body>
 </html>
