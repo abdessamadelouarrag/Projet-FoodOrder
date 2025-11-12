@@ -15,37 +15,64 @@ cartProduct.forEach(product=>{
     inject.querySelector('#title').textContent = product.name
     inject.querySelector('#price').textContent = product.price
     document.querySelector('.totalPanier').textContent = ((parseFloat(document.querySelector('.totalPanier').textContent)+ parseFloat(product.price))).toFixed(2).toString()
+    inject.querySelector("#qte-text").textContent = product.quantity.toString()
     //event si lutilisateur click sur svg + qte va baisser et aussi pour svg -
 
 
-
+//--------------------------------
+    try{
     inject.querySelector('#miniceQte').addEventListener('click',e=>{
-        inject.querySelector('#qte-text').textContent= (parseFloat(inject.querySelector('#qte-text').textContent)-1).toString()
-        if  (parseFloat(inject.querySelector('#qte-text').textContent) === 0) {inject.remove()}
-        document.querySelector('.totalPanier').textContent =((parseFloat(document.querySelector('.totalPanier').textContent)-parseFloat(product.price))).toFixed(2).toString()
+        cartProduct.forEach(toaddpro=>{
+            if(toaddpro.id===product.id){
+                if  (parseInt(inject.querySelector('#qte-text').textContent) === 1) {
+                    inject.remove()
+                    cartProduct = cartProduct.filter(every=> every.id!==product.id )
+                    localStorage.setItem("produits",JSON.stringify(cartProduct))
+                }
+                else {
+                    inject.querySelector('#qte-text').textContent= (parseInt(inject.querySelector('#qte-text').textContent)-1).toString()
+                    product.quantity--;
+                    localStorage.setItem("produits",JSON.stringify(cartProduct))
+                }
+            }
+        })
 
+        document.querySelector('.totalPanier').textContent =((parseFloat(document.querySelector('.totalPanier').textContent)-product.price)).toFixed(2).toString()
         document.querySelectorAll('.totalPanier')[1].textContent = document.querySelector('.totalPanier').textContent
-    })
-    //
-    //
-    //
-    //
-    //
-    //
-    inject.querySelector('#addQte').addEventListener('click',e=>{
-        inject.querySelector('#qte-text').textContent=(parseFloat(inject.querySelector('#qte-text').textContent)+1).toString()
 
+    })}catch{console.log("fuck u1 ")}
+    //
+    //
+
+
+    //addd to local storage
+        try{ inject.querySelector('#addQte').addEventListener('click',e=>{
+        inject.querySelector('#qte-text').textContent=(parseFloat(inject.querySelector('#qte-text').textContent)+1).toString()
+        cartProduct.forEach(toaddpro=>{
+            if(toaddpro.id===product.id){
+                product.quantity++;
+            }
+        })
+        localStorage.setItem("produits",JSON.stringify(cartProduct))
         document.querySelector('.totalPanier').textContent = (parseFloat(document.querySelector('.totalPanier').textContent)+parseFloat(product.price)).toFixed(2).toString()
         document.querySelectorAll('.totalPanier')[1].textContent = document.querySelector('.totalPanier').textContent
-    })
-    //
-    inject.querySelector('#deleteCartCard').addEventListener('click',e=>{
-        inject.remove()
-        document.querySelector('.totalPanier').textContent = (parseFloat(document.querySelector('.totalPanier').textContent)-parseFloat(product.price)).toFixed(2).toString()
+    }) }catch{console.log("fuck u2 ")}
 
+    //removeeeee from the fk local storage
+    try{inject.querySelector('#deleteCartCard').addEventListener('click',e=>{
+        inject.remove()
+       cartProduct = cartProduct.filter(prod=>prod.id !== product.id)
+
+        localStorage.setItem("produits",JSON.stringify(cartProduct))
+
+        document.querySelector('.totalPanier').textContent = (parseFloat(document.querySelector('.totalPanier').textContent)-parseFloat(product.price)).toFixed(2).toString()
         document.querySelectorAll('.totalPanier')[1].textContent = document.querySelector('.totalPanier').textContent
-    })
+    })}catch{console.log("fuck u3 ")}
+//--------------------------------
+
     document.querySelectorAll('.totalPanier')[1].textContent = document.querySelector('.totalPanier').textContent
     document.getElementById("elemnt-ajouter").append(inject)
 })
 
+///////////erreur lwl khas xi blan kfch html dyal panier treload onclick
+// khas hta localstorage l qte
