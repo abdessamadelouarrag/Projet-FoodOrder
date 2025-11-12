@@ -23,13 +23,57 @@ sectionHeader.addEventListener('mouseenter', () => {
 sectionHeader.addEventListener('mouseleave', () => {
     titlePaiment.style.opacity = 0;
     setTimeout(() => titlePaiment.classList.add('hidden'), 500);
-});
-let totalPay = 0;
+}); 
 let listProduit = JSON.parse(localStorage.getItem("produits")) || [];
 listProduit.forEach(e=>{
-    totalPay += Number(e.price) * Number(e.quantity);
     let card = document.createElement("div")
     card.innerHTML = CardPaiment(e);
     containerCards.append(card);
 })
-total.textContent = totalPay;
+
+function updateTotal() {
+    let listProduit = JSON.parse(localStorage.getItem("produits")) || [];
+    let totalPay = 0;
+
+    listProduit.forEach(p => {
+        totalPay += Number(p.price) * Number(p.quantity);
+    });
+
+    total.textContent = totalPay.toFixed(2) + " MAD";
+}
+
+
+function initQuantityEvents() {
+    const cards = document.querySelectorAll("#CardPaiement");
+
+    cards.forEach((card, index) => {
+        const minusBtn = card.querySelector("img[alt='icon minus']");
+        const plusBtn = card.querySelector("img[alt='icon plus']");
+        const quantityInput = card.querySelector("input");
+
+        minusBtn.addEventListener("click", () => changeQuantity(index, -1, quantityInput));
+        plusBtn.addEventListener("click", () => changeQuantity(index, +1, quantityInput));
+    });
+}
+
+function changeQuantity(index, change, quantityInput) {
+    let produits = JSON.parse(localStorage.getItem("produits")) || [];
+
+    let newQuantity = produits[index].quantity + change;
+
+    if (newQuantity < 1) {
+        newQuantity = 1;
+    }
+
+    produits[index].quantity = newQuantity;
+
+    localStorage.setItem("produits", JSON.stringify(produits));
+
+    quantityInput.value = newQuantity;
+
+    updateTotal();
+}
+
+
+initQuantityEvents();
+updateTotal();
