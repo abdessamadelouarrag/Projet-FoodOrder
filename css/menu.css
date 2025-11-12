@@ -6,3 +6,20 @@
     background: linear-gradient( -135deg  , transparent 0% , #03081F80 58% , #03081F 100% );
 
 }
+
+.paginationdef1{
+    background-color: #860000;
+    color:  white;
+}
+.pagination1{
+    color:#860000;
+    background-color: white;
+}
+.pagination2{
+    background-color: white;
+    color: #860000;
+}
+.pagination3{
+    background-color: white;
+    color: #860000;
+}

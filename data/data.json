@@ -98,5 +98,205 @@
     "image": "https://cdn.pixabay.com/photo/2017/03/17/10/07/chocolate-mousse-2151991_1280.jpg",
     "size": ["S", "M"],
     "availability": true
+  },
+    {
+    "id": 1,
+    "name": "Pizza Margherita",
+    "category": "Plat",
+    "description": "Pizza traditionnelle avec sauce tomate, mozzarella et basilic frais.",
+    "price": 8.99,
+    "image": "https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg",
+    "size": ["S", "M", "L", "XL"],
+    "availability": true
+  },
+  {
+    "id": 2,
+    "name": "Burger Classique",
+    "category": "Plat",
+    "description": "Pain brioché, steak haché, fromage cheddar, salade et tomate.",
+    "price": 9.49,
+    "image": "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.jpg",
+    "size": ["S", "M", "L"],
+    "availability": true
+  },
+  {
+    "id": 3,
+    "name": "Salade César",
+    "category": "Entrée",
+    "description": "Salade romaine, poulet grillé, parmesan, croûtons et sauce César.",
+    "price": 7.25,
+    "image": "https://cdn.pixabay.com/photo/2016/03/05/19/02/salad-1238248_1280.jpg",
+    "size": ["M", "L"],
+    "availability": true
+  },
+  {
+    "id": 4,
+    "name": "Pâtes Carbonara",
+    "category": "Plat",
+    "description": "Spaghetti crémeux avec lardons, œuf et parmesan.",
+    "price": 10.50,
+    "image": "https://cdn.pixabay.com/photo/2017/09/02/13/25/spaghetti-2701814_1280.jpg",
+    "size": ["S", "M", "L"],
+    "availability": true
+  },
+  {
+    "id": 5,
+    "name": "Soupe à l’oignon",
+    "category": "Entrée",
+    "description": "Soupe traditionnelle française gratinée au fromage.",
+    "price": 5.99,
+    "image": "https://cdn.pixabay.com/photo/2018/02/14/10/14/soup-3158089_1280.jpg",
+    "size": ["S", "M"],
+    "availability": true
+  },
+  {
+    "id": 6,
+    "name": "Crêpe Nutella",
+    "category": "Dessert",
+    "description": "Crêpe sucrée garnie de Nutella et de sucre glace.",
+    "price": 4.50,
+    "image": "https://cdn.pixabay.com/photo/2017/03/24/13/48/crepes-2178873_1280.jpg",
+    "size": ["S", "M"],
+    "availability": true
+  },
+  {
+    "id": 7,
+    "name": "Tiramisu",
+    "category": "Dessert",
+    "description": "Dessert italien au café, mascarpone et cacao.",
+    "price": 5.25,
+    "image": "https://cdn.pixabay.com/photo/2016/11/29/03/28/tiramisu-1869658_1280.jpg",
+    "size": ["S", "M"],
+    "availability": true
+  },
+  {
+    "id": 8,
+    "name": "Steak Frites",
+    "category": "Plat",
+    "description": "Steak grillé accompagné de frites croustillantes.",
+    "price": 12.90,
+    "image": "https://cdn.pixabay.com/photo/2017/04/23/18/58/steak-2259269_1280.jpg",
+    "size": ["M", "L", "XL"],
+    "availability": true
+  },
+  {
+    "id": 9,
+    "name": "Poulet Curry",
+    "category": "Plat",
+    "description": "Poulet mijoté dans une sauce au curry doux et lait de coco.",
+    "price": 11.75,
+    "image": "https://cdn.pixabay.com/photo/2017/05/07/08/56/curry-2297201_1280.jpg",
+    "size": ["S", "M", "L"],
+    "availability": true
+  },
+  {
+    "id": 10,
+    "name": "Mousse au chocolat",
+    "category": "Dessert",
+    "description": "Mousse légère au chocolat noir, servie fraîche.",
+    "price": 4.99,
+    "image": "https://cdn.pixabay.com/photo/2017/03/17/10/07/chocolate-mousse-2151991_1280.jpg",
+    "size": ["S", "M"],
+    "availability": true
+  },
+    {
+    "id": 1,
+    "name": "Pizza Margherita",
+    "category": "Plat",
+    "description": "Pizza traditionnelle avec sauce tomate, mozzarella et basilic frais.",
+    "price": 8.99,
+    "image": "https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg",
+    "size": ["S", "M", "L", "XL"],
+    "availability": true
+  },
+  {
+    "id": 2,
+    "name": "Burger Classique",
+    "category": "Plat",
+    "description": "Pain brioché, steak haché, fromage cheddar, salade et tomate.",
+    "price": 9.49,
+    "image": "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.jpg",
+    "size": ["S", "M", "L"],
+    "availability": true
+  },
+  {
+    "id": 3,
+    "name": "Salade César",
+    "category": "Entrée",
+    "description": "Salade romaine, poulet grillé, parmesan, croûtons et sauce César.",
+    "price": 7.25,
+    "image": "https://cdn.pixabay.com/photo/2016/03/05/19/02/salad-1238248_1280.jpg",
+    "size": ["M", "L"],
+    "availability": true
+  },
+  {
+    "id": 4,
+    "name": "Pâtes Carbonara",
+    "category": "Plat",
+    "description": "Spaghetti crémeux avec lardons, œuf et parmesan.",
+    "price": 10.50,
+    "image": "https://cdn.pixabay.com/photo/2017/09/02/13/25/spaghetti-2701814_1280.jpg",
+    "size": ["S", "M", "L"],
+    "availability": true
+  },
+  {
+    "id": 5,
+    "name": "Soupe à l’oignon",
+    "category": "Entrée",
+    "description": "Soupe traditionnelle française gratinée au fromage.",
+    "price": 5.99,
+    "image": "https://cdn.pixabay.com/photo/2018/02/14/10/14/soup-3158089_1280.jpg",
+    "size": ["S", "M"],
+    "availability": true
+  },
+  {
+    "id": 6,
+    "name": "Crêpe Nutella",
+    "category": "Dessert",
+    "description": "Crêpe sucrée garnie de Nutella et de sucre glace.",
+    "price": 4.50,
+    "image": "https://cdn.pixabay.com/photo/2017/03/24/13/48/crepes-2178873_1280.jpg",
+    "size": ["S", "M"],
+    "availability": true
+  },
+  {
+    "id": 7,
+    "name": "Tiramisu",
+    "category": "Dessert",
+    "description": "Dessert italien au café, mascarpone et cacao.",
+    "price": 5.25,
+    "image": "https://cdn.pixabay.com/photo/2016/11/29/03/28/tiramisu-1869658_1280.jpg",
+    "size": ["S", "M"],
+    "availability": true
+  },
+  {
+    "id": 8,
+    "name": "Steak Frites",
+    "category": "Plat",
+    "description": "Steak grillé accompagné de frites croustillantes.",
+    "price": 12.90,
+    "image": "https://cdn.pixabay.com/photo/2017/04/23/18/58/steak-2259269_1280.jpg",
+    "size": ["M", "L", "XL"],
+    "availability": true
+  },
+  {
+    "id": 9,
+    "name": "Poulet Curry",
+    "category": "Plat",
+    "description": "Poulet mijoté dans une sauce au curry doux et lait de coco.",
+    "price": 11.75,
+    "image": "https://cdn.pixabay.com/photo/2017/05/07/08/56/curry-2297201_1280.jpg",
+    "size": ["S", "M", "L"],
+    "availability": true
+  },
+  {
+    "id": 10,
+    "name": "Mousse au chocolat",
+    "category": "Dessert",
+    "description": "Mousse légère au chocolat noir, servie fraîche.",
+    "price": 4.99,
+    "image": "https://cdn.pixabay.com/photo/2017/03/17/10/07/chocolate-mousse-2151991_1280.jpg",
+    "size": ["S", "M"],
+    "availability": true
   }
 ]

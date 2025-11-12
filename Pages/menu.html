@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="../css/font-color.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/compenents.css">
 
 </head>
 
@@ -154,10 +155,10 @@
 
         <ul class="flex gap-6 sm:gap-6 lg:gap-16 ">
             <!--              those links need id , i need to contact scrum to figure out where to put it li or a -->
-            <li class="flex justify-center items-center  rounded-[20px]   hover:bg-[#03081F]"><a href="#">Burger</a>
+            <li id="burger" class="flex justify-center items-center  rounded-[20px]   hover:bg-[#03081F]"><a href="#filterSection">Burger</a>
             </li>
-            <li class="flex justify-center items-center  rounded-[20px]   hover:bg-[#03081F]"><a href="#">Pizza</a></li>
-            <li class="flex justify-center items-center  rounded-[20px]   hover:bg-[#03081F]"><a href="#">Drinks</a>
+            <li id="pizza" class="flex justify-center items-center  rounded-[20px]   hover:bg-[#03081F]"><a href="#filterSection">Pizza</a></li>
+            <li id="drinks" class="flex justify-center items-center  rounded-[20px]   hover:bg-[#03081F]"><a href="#fliterSection">Drinks</a>
             </li>
         </ul>
 
@@ -177,9 +178,11 @@
 
 <section id="MENU">
 
-   <div id="menu_container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
-  <!-- ici tes cards -->
-</div>
+    <div id="menu_container" class="grid grid-cols-3 grid-rows-4">
+        <!-- hna fen ghadi yt7to cards dyl menu-->
+
+
+    </div>
 
 
     <div id="pagination" class="flex  items-center gap-3  w-fit m-auto ">
@@ -187,9 +190,9 @@
              class=" w-3 h-3 border-t-4 border-l-4 border-red-700 rotate-[-45deg]  aspect-square "></div>
 
         <div class="flex gap-3">
-            <div id="page1" class="rounded-full bg-white TX-red px-2">1</div>
-            <div id="page2" class="rounded-full BGG-red px-2">2</div>
-            <div id="page3" class="rounded-full BGG-red px-2">3</div>
+            <div id="page1" role="button"  class=" paginationdef1 rounded-full BGG-red px-2">1</div>
+            <div id="page2"role="button" class="pagination2 rounded-full BGG-red px-2">2</div>
+            <div id="page3" role="button" class="pagination3 rounded-full BGG-red px-2">3</div>
         </div>
         <div id="right_page" class=" w-3 h-3 border-t-4 border-l-4 border-red-700 rotate-[135deg] "></div>
     </div>
@@ -268,7 +271,7 @@
 <section id="brands"></section>
 <footer id="footer"></footer>
 <script type="module" src="../js/menu.js"></script>
-<!-- <script type="module" src="../js/fetchComponents.js"></script> -->
+<script type="module" src="../js/fetchComponents.js"></script>
 
 </body>
 
