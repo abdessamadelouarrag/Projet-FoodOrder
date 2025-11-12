@@ -5,6 +5,7 @@ const btnNow = document.getElementById('now');
 const bgPaiment = document.getElementById('bg-Paiment');
 const sectionHeader = document.getElementById('section-header');
 const titlePaiment = document.getElementById('titlePaiment');
+const total = document.getElementById('total');
 const containerCards = document.getElementById('cards-Paiment');
 btnNow.addEventListener('click', () => {
     bgPaiment.style.transform = "translateX(100%)"
@@ -23,10 +24,12 @@ sectionHeader.addEventListener('mouseleave', () => {
     titlePaiment.style.opacity = 0;
     setTimeout(() => titlePaiment.classList.add('hidden'), 500);
 });
-
+let totalPay = 0;
 let listProduit = JSON.parse(localStorage.getItem("produits")) || [];
 listProduit.forEach(e=>{
+    totalPay += Number(e.price) * Number(e.quantity);
     let card = document.createElement("div")
     card.innerHTML = CardPaiment(e);
-    containerCards.append(card)
+    containerCards.append(card);
 })
+total.textContent = totalPay;

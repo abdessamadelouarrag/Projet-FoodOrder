@@ -652,7 +652,7 @@ export function CardPaiment(produit){
 
   <div class="col-span-5 flex flex-col text-white overflow-hidden">
     <div class="flex items-center mb-2 gap-2 flex-wrap">
-      <h2 class="font-semibold text-sm sm:text-base md:text-lg truncate">Margareta</h2>
+      <h2 class="font-semibold text-sm sm:text-base md:text-lg truncate">${produit.name}</h2>
       <div class="bg-[#D02A2A] px-2 py-0.5 rounded-md text-xs sm:text-sm">
         <p class="font-semibold">
           MAD <span id="prix-initial">${produit.price}</span>
@@ -669,7 +669,7 @@ export function CardPaiment(produit){
     <!-- Bouton - -->
       <img src="../assets/images/icon/-icon.svg" class="w-[90px] sm:w-[10px] md:w-[20px]" alt="icon minus">
 
-    <input type="text" value="1"
+      <input type="text" value="1"
       class="text-center rounded-md border border-gray-300 text-black w-8 sm:w-10 h-7 sm:h-8 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#D02A2A]">
 
       <img src="../assets/images/icon/+_icon.svg" class="w-[90px] sm:w-[10px] md:w-[20px]" alt="icon plus">
