@@ -1,11 +1,13 @@
 // for target a btn size
 
 const btns = document.querySelectorAll(".btn-choix");
+const listPanier = JSON.parse(localStorage.getItem("produits")) || []
+const listProduct = [];
 
 btns.forEach(btn => {
     btn.addEventListener("click", () => {
 
-        // Reset all buttons
+
 
         btns.forEach(reset => {
             reset.style.backgroundColor = "";
@@ -15,7 +17,6 @@ btns.forEach(btn => {
             priceSize.style.backgroundColor = "";
         });
 
-        // Activate the clicked one
 
         btn.style.backgroundColor = "#181818";
         const size = btn.querySelector(".size-food");
@@ -29,23 +30,29 @@ const imageFetch = document.querySelector(".image-url");
 const titleFetch = document.querySelector(".title-food");
 const descriptionFetch = document.querySelector(".description-food")
 const priceFetch = document.querySelector("#total-price");
-const priceSizeFetch = document.querySelectorAll(".priceT");
+const priceSizeFetch = document.getElementsByClassName("priceT");
+const btnAddToCard = document.querySelector(".btn-add-to-card");
+let priceStock = 0;
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
-console.log(id);
 
+let produit = null;
 
 fetch('../data/data.json')
     .then(response => response.json())
     .then(data => {
         data.forEach( e=>{
+            listProduct.push(e);
             if(e.id == id){
+                produit = e;
                 imageFetch.src = e.image;
                 titleFetch.textContent = e.name;
                 descriptionFetch.textContent = e.description;
                 priceFetch.textContent = e.price;
-                for(i = 0; i < 4; i++){
+                priceStock = e.price;
+
+                for(let i = 0; i < priceSizeFetch.length; i++){
                     priceSizeFetch[i].textContent = e.price;
                 }
             }
@@ -64,12 +71,15 @@ plusPriceValue.addEventListener('click', () => {
 
     const totalPrice = document.querySelector('#total-price');
     let valuePrice = parseFloat(totalPrice.textContent);
-    valuePrice ++;
+    valuePrice += priceStock;
+
+    
     totalPrice.textContent = valuePrice.toFixed(2);
+
 })
 
+
 const minusPriceValue = document.querySelector('.btn-minus');
-const a = 
 
 minusPriceValue.addEventListener('click', () => {
     const minuS = document.querySelector('#number-total-food');
@@ -81,8 +91,23 @@ minusPriceValue.addEventListener('click', () => {
 
     const totalPrice = document.querySelector('#total-price');
     let valuePrice = parseFloat(totalPrice.textContent);
-    if (valuePrice) {
-        valuePrice --;
+    if (valuePrice > priceStock) {
+        valuePrice -= priceStock;
         totalPrice.textContent = valuePrice.toFixed(2);
     }
 });
+
+btnAddToCard.addEventListener("click", () => {
+    const nbrTotal = document.querySelector("#number-total-food").textContent;
+    const p = listPanier.find(e => {
+        e.id == id
+    })
+    if(p!== null){
+        produit.quantity = Number(nbrTotal);
+    }else{
+        produit.quantity = Number(nbrTotal);
+        listPanier.push(produit)
+    }
+
+    localStorage.setItem("produits", JSON.stringify(listPanier));
+})
