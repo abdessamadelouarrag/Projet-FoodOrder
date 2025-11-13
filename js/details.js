@@ -102,7 +102,6 @@ btnAddToCard.addEventListener("click", () => {
     const p = listPanier.find(e => e.id == id);
 
     if(p){
-        
         p.quantity += Number(nbrTotal);
     } else {
        
