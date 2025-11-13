@@ -2,12 +2,12 @@ export function Navbar(){
     return `<div class="fixed top-0 left-0 w-full h-[100px] z-[9999]">
     <!-- Barre principale -->
     <div class="flex justify-between items-center h-full px-8 text-white">
-      <a href="../index.html"><img class="w-[150px]" src="../assets/images/Nav/logo-nar.png" alt="logo foodorder+" class="backdrop-blur-lg rounded-full"></a>
+      <a href="../index.html"><img class="w-[200px]" src="../assets/images/Nav/logo-nar.png" alt="logo foodorder+" class="backdrop-blur-lg rounded-full"></a>
       <ul class="hidden md:flex gap-8 backdrop-blur-lg rounded-full">
-        <li class="hover:bg-[#91011A] px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../index.html">Home</a></li>
-        <li class="hover:bg-[#91011A] px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../Pages/menu.html">Menu</a>
+        <li class="hover:bg-[#91011A]  hover:rounded-full px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../index.html">Home</a></li>
+        <li class="hover:bg-[#91011A] hover:rounded-full px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../Pages/menu.html">Menu</a>
         </li>
-        <li class="hover:bg-[#91011A] px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../Pages/about.html">About
+        <li class="hover:bg-[#91011A] hover:rounded-full px-4 py-2 rounded-[10px] backdrop-blur-lg"><a href="../Pages/about.html">About
             US</a></li>
       </ul>
 
@@ -31,7 +31,7 @@ export function Navbar(){
       <img class="w-[180px]" src="../assets/images/Nav/logo-nar.png" alt="logo foodorder+">
 
       <!-- Panier -->
-      <div class="relative">
+      <div id="panierSideBar" class="relative">
         <div class="h-[40px] w-[50px] bg-[#91011A] rounded-[6px] blur-[1px] border border-[#91011A]/30"></div>
         <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           src="../assets/images/Nav/shopping-cart-icon.svg" alt="panier">
@@ -45,7 +45,7 @@ export function Navbar(){
         </li>
         <li
           class="py-2 border border-white/20 rounded-[50px] backdrop-blur-sm hover:bg-[#91011A] transition duration-300 cursor-pointer">
-          <a href="#Menu">Menu</a>
+          <a href="../Pages/menu.html">Menu</a>
         </li>
         <li
           class="py-2 border border-white/20 rounded-[50px] backdrop-blur-sm hover:bg-[#91011A] transition duration-300 cursor-pointer">
@@ -58,7 +58,7 @@ export function Navbar(){
 
     </div>
   </div>
-  <div class="h-100"></div>
+  <div class="h-[100px] bg-[#101018]"></div>
   `;
 }
 export function Panier(){
@@ -714,7 +714,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.getElementById("sidebar");
   const cover = document.getElementById("cover");
   const panierSideBar = document.getElementById("panier");
-
+  const btnPanierSideBar = document.getElementById("panierSideBar");
   if (!PanierBtn || !burgerBtn || !sidebar || !cover || !panierSideBar) {
     console.error(" Un des éléments du DOM est introuvable !");
     return;
@@ -736,6 +736,12 @@ document.addEventListener("DOMContentLoaded", () => {
     panierSideBar.classList.remove("translate-x-full");
     cover.classList.remove("hidden");
   });
+  btnPanierSideBar.addEventListener("click", () => {
+    console.log(" Bouton panier cliqué !");
+    panierSideBar.classList.remove("translate-x-full");
+    cover.classList.remove("hidden");
+  });
 });
+
 
 
