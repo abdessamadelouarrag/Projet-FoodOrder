@@ -125,7 +125,6 @@ function createMenuCard(item) {
   `;
 }
 
-
 function initializeCarousels() {
   const possiblePaths = [
     './data/data.json',
