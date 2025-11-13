@@ -40,6 +40,8 @@ const id = params.get('id');
 
 let produit = null;
 
+//fetch date.json to change all info in details with produit i clicked
+
 fetch('../data/data.json')
     .then(response => response.json())
     .then(data => {
@@ -113,6 +115,8 @@ btnAddToCard.addEventListener("click", () => {
     alert('you add the product in card go back to buy you food');
     localStorage.setItem("produits", JSON.stringify(listPanier));
 });
+
+// fetch food similar (abdessamad)
 
 const SimilarFood = document.getElementById("SimilarFood");
 fetch("../data/data.json")
