@@ -1,4 +1,5 @@
 // for target a btn size
+import { CardMenu } from "../js/fetchComponents.js";
 
 const btns = document.querySelectorAll(".btn-choix");
 const listPanier = JSON.parse(localStorage.getItem("produits")) || []
@@ -39,12 +40,14 @@ const id = params.get('id');
 
 let produit = null;
 
+//fetch date.json to change all info in details with produit i clicked
+
 fetch('../data/data.json')
     .then(response => response.json())
     .then(data => {
-        data.forEach( e=>{
+        data.forEach(e => {
             listProduct.push(e);
-            if(e.id == id){
+            if (e.id == id) {
                 produit = e;
                 imageFetch.src = e.image;
                 titleFetch.textContent = e.name;
@@ -52,12 +55,12 @@ fetch('../data/data.json')
                 priceFetch.textContent = e.price;
                 priceStock = e.price;
 
-                for(let i = 0; i < priceSizeFetch.length; i++){
+                for (let i = 0; i < priceSizeFetch.length; i++) {
                     priceSizeFetch[i].textContent = e.price;
                 }
             }
-    })      
-});
+        })
+    });
 
 
 const plusPriceValue = document.querySelector('.btn-plus');
@@ -73,7 +76,7 @@ plusPriceValue.addEventListener('click', () => {
     let valuePrice = parseFloat(totalPrice.textContent);
     valuePrice += priceStock;
 
-    
+
     totalPrice.textContent = valuePrice.toFixed(2);
 
 })
@@ -101,10 +104,10 @@ btnAddToCard.addEventListener("click", () => {
     const nbrTotal = document.querySelector("#number-total-food").textContent;
     const p = listPanier.find(e => e.id == id);
 
-    if(p){
+    if (p) {
         p.quantity += Number(nbrTotal);
     } else {
-       
+
         produit.quantity = Number(nbrTotal);
         listPanier.push(produit);
     }
@@ -112,3 +115,41 @@ btnAddToCard.addEventListener("click", () => {
     alert('you add the product in card go back to buy you food');
     localStorage.setItem("produits", JSON.stringify(listPanier));
 });
+
+// fetch food similar (abdessamad)
+
+const SimilarFood = document.getElementById("SimilarFood");
+fetch("../data/data.json")
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(d => {
+            if (produit.category == d.category) {
+                let card = document.createElement("div")
+                card.id = d.id
+                card.innerHTML = CardMenu(d)
+                let btnPanier = card.querySelector("#btnPanier")
+                card.addEventListener("click", () => {
+                    window.location.href = `../Pages/details.html?id=${d.id}`;
+                })
+                btnPanier.addEventListener("click", (event) => {
+                    event.stopPropagation()
+                    let exist = false
+                    //
+                    listPanier.forEach(p => {
+                        if (p.id === d.id) {
+                            exist = true
+                        }
+                    })
+                    if (exist) {
+                        alert("produit deja en panier")
+                    } else {
+                        listPanier.push(d)
+                        localStorage.setItem("produits", JSON.stringify(listPanier))
+                        alert("produit bien ajouter en panier")
+                    }
+
+                })
+                SimilarFood.append(card)
+            }
+        })
+    })

@@ -5,7 +5,7 @@
     "category": "Burger",
     "description": "Pain brioché, steak haché, cheddar, salade et tomate.",
     "price": 9.99,
-    "image": "https://example.com/images/burger-classique.jpg",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
     "size": ["Normal", "Double"],
     "availability": true,
     "quantity": 1
@@ -16,7 +16,7 @@
     "category": "Burger",
     "description": "Burger avec bacon croustillant, oignons caramélisés et sauce BBQ.",
     "price": 10.99,
-    "image": "https://example.com/images/burger-bacon.jpg",
+    "image": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400",
     "size": ["Normal", "Double"],
     "availability": true,
     "quantity": 1
@@ -27,7 +27,7 @@
     "category": "Burger",
     "description": "Double cheddar fondant et sauce spéciale maison.",
     "price": 11.49,
-    "image": "https://example.com/images/burger-fromage.jpg",
+    "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400",
     "size": ["Normal", "Double"],
     "availability": true,
     "quantity": 1
@@ -38,7 +38,7 @@
     "category": "Burger",
     "description": "Poulet croustillant, salade, tomate et sauce mayo épicée.",
     "price": 10.49,
-    "image": "https://example.com/images/burger-poulet.jpg",
+    "image": "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400",
     "size": ["Normal", "Double"],
     "availability": true,
     "quantity": 1
@@ -49,7 +49,7 @@
     "category": "Burger",
     "description": "Galette de légumes, fromage, salade et sauce légère.",
     "price": 9.25,
-    "image": "https://example.com/images/burger-vege.jpg",
+    "image": "https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400",
     "size": ["Normal"],
     "availability": true,
     "quantity": 1
@@ -60,7 +60,7 @@
     "category": "Burger",
     "description": "Burger relevé avec jalapeños et sauce piquante.",
     "price": 10.99,
-    "image": "https://example.com/images/burger-spicy.jpg",
+    "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400",
     "size": ["Normal", "Double"],
     "availability": true,
     "quantity": 1
@@ -71,7 +71,7 @@
     "category": "Burger",
     "description": "Steak haché, champignons sautés, fromage suisse et sauce crémeuse.",
     "price": 11.29,
-    "image": "https://example.com/images/burger-champignon.jpg",
+    "image": "https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400",
     "size": ["Normal", "Double"],
     "availability": true,
     "quantity": 1
@@ -82,7 +82,7 @@
     "category": "Burger",
     "description": "Double steak, fromage, salade, tomate, cornichons et sauce spéciale.",
     "price": 12.49,
-    "image": "https://example.com/images/burger-deluxe.jpg",
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400",
     "size": ["Normal", "Double"],
     "availability": true,
     "quantity": 1
@@ -93,7 +93,7 @@
     "category": "Pizza",
     "description": "Tomate, mozzarella et basilic frais.",
     "price": 8.99,
-    "image": "https://example.com/images/pizza-margherita.jpg",
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400",
     "size": ["S", "M", "L", "XL"],
     "availability": true,
     "quantity": 1
@@ -104,7 +104,7 @@
     "category": "Pizza",
     "description": "Mozzarella, gorgonzola, chèvre et parmesan.",
     "price": 11.49,
-    "image": "https://example.com/images/pizza-quatre-fromages.jpg",
+    "image": "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=400",
     "size": ["S", "M", "L", "XL"],
     "availability": true,
     "quantity": 1
@@ -115,7 +115,7 @@
     "category": "Pizza",
     "description": "Tomate, mozzarella et tranches de pepperoni.",
     "price": 10.99,
-    "image": "https://example.com/images/pizza-pepperoni.jpg",
+    "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400",
     "size": ["S", "M", "L", "XL"],
     "availability": true,
     "quantity": 1
@@ -126,7 +126,7 @@
     "category": "Pizza",
     "description": "Tomates, poivrons, olives, oignons et mozzarella.",
     "price": 9.75,
-    "image": "https://example.com/images/pizza-vege.jpg",
+    "image": "https://images.unsplash.com/photo-1511689660979-10d2b1aada49?w=400",
     "size": ["S", "M", "L", "XL"],
     "availability": true,
     "quantity": 1
@@ -137,7 +137,7 @@
     "category": "Pizza",
     "description": "Jambon, ananas et mozzarella fondante.",
     "price": 10.25,
-    "image": "https://example.com/images/pizza-hawai.jpg",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400",
     "size": ["S", "M", "L", "XL"],
     "availability": true,
     "quantity": 1
@@ -148,7 +148,7 @@
     "category": "Pizza",
     "description": "Jambon, champignons, mozzarella et olives.",
     "price": 10.50,
-    "image": "https://example.com/images/pizza-reine.jpg",
+    "image": "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?w=400",
     "size": ["S", "M", "L", "XL"],
     "availability": true,
     "quantity": 1
@@ -159,7 +159,7 @@
     "category": "Pizza",
     "description": "Poulet grillé, sauce barbecue et fromage fondant.",
     "price": 11.75,
-    "image": "https://example.com/images/pizza-bbq.jpg",
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400",
     "size": ["S", "M", "L", "XL"],
     "availability": true,
     "quantity": 1
@@ -170,7 +170,7 @@
     "category": "Pizza",
     "description": "Saumon fumé, crème fraîche et mozzarella.",
     "price": 12.50,
-    "image": "https://example.com/images/pizza-saumon.jpg",
+    "image": "https://images.unsplash.com/photo-1564128442383-9201fcc740eb?w=400",
     "size": ["S", "M", "L", "XL"],
     "availability": true,
     "quantity": 1
@@ -181,7 +181,7 @@
     "category": "Pizza",
     "description": "Bœuf épicé, oignons rouges, maïs et poivrons.",
     "price": 11.90,
-    "image": "https://example.com/images/pizza-mexicaine.jpg",
+    "image": "https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=400",
     "size": ["S", "M", "L", "XL"],
     "availability": true,
     "quantity": 1
@@ -192,7 +192,7 @@
     "category": "Drink",
     "description": "Boisson gazeuse rafraîchissante classique.",
     "price": 2.99,
-    "image": "https://example.com/images/coca-cola.jpg",
+    "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400",
     "size": ["33cl", "50cl", "1L"],
     "availability": true,
     "quantity": 1
@@ -203,18 +203,18 @@
     "category": "Drink",
     "description": "Eau plate naturelle et rafraîchissante.",
     "price": 1.99,
-    "image": "https://example.com/images/eau.jpg",
+    "image": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400",
     "size": ["50cl", "1L"],
     "availability": true,
     "quantity": 1
   },
   {
     "id": 20,
-    "name": "Jus d’Orange",
+    "name": "Jus d'Orange",
     "category": "Drink",
-    "description": "Jus d’orange 100% pressé.",
+    "description": "Jus d'orange 100% pressé.",
     "price": 3.49,
-    "image": "https://example.com/images/jus-orange.jpg",
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400",
     "size": ["25cl", "50cl"],
     "availability": true,
     "quantity": 1
@@ -225,7 +225,7 @@
     "category": "Drink",
     "description": "Jus exotique à base de purée de mangue naturelle.",
     "price": 3.99,
-    "image": "https://example.com/images/jus-mangue.jpg",
+    "image": "https://images.unsplash.com/photo-1546173159-315724a31696?w=400",
     "size": ["25cl", "50cl"],
     "availability": true,
     "quantity": 1
@@ -236,7 +236,7 @@
     "category": "Drink",
     "description": "Mélange fruité et onctueux à la fraise et banane.",
     "price": 4.25,
-    "image": "https://example.com/images/smoothie-fraise-banane.jpg",
+    "image": "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=400",
     "size": ["25cl", "50cl"],
     "availability": true,
     "quantity": 1
@@ -247,7 +247,7 @@
     "category": "Drink",
     "description": "Thé glacé rafraîchissant au goût citronné.",
     "price": 2.79,
-    "image": "https://example.com/images/the-glace.jpg",
+    "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400",
     "size": ["33cl", "50cl"],
     "availability": true,
     "quantity": 1
@@ -258,7 +258,7 @@
     "category": "Drink",
     "description": "Boisson gazeuse fruitée goût tropical.",
     "price": 2.99,
-    "image": "https://example.com/images/soda-tropical.jpg",
+    "image": "https://i.redd.it/rza8e9gtkl5f1.jpeg",
     "size": ["33cl", "50cl"],
     "availability": true,
     "quantity": 1
@@ -269,7 +269,7 @@
     "category": "Drink",
     "description": "Limonade fraîche faite avec du citron et de la menthe.",
     "price": 3.25,
-    "image": "https://example.com/images/limonade.jpg",
+    "image": "https://www.cakesparadise.fr/wp-content/uploads/2025/07/1752416910_748_Limonade-maison.jpg",
     "size": ["33cl", "50cl"],
     "availability": true,
     "quantity": 1
@@ -280,7 +280,7 @@
     "category": "Drink",
     "description": "Expresso italien fort et aromatique.",
     "price": 2.49,
-    "image": "https://example.com/images/cafe-espresso.jpg",
+    "image": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400",
     "size": ["Simple", "Double"],
     "availability": true,
     "quantity": 1
@@ -291,7 +291,7 @@
     "category": "Drink",
     "description": "Café espresso avec mousse de lait et cacao.",
     "price": 3.29,
-    "image": "https://example.com/images/cappuccino.jpg",
+    "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400",
     "size": ["Petite", "Grande"],
     "availability": true,
     "quantity": 1
@@ -302,7 +302,7 @@
     "category": "Drink",
     "description": "Café au lait doux parfumé à la vanille.",
     "price": 3.75,
-    "image": "https://example.com/images/latte-vanille.jpg",
+    "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400",
     "size": ["Petite", "Grande"],
     "availability": true,
     "quantity": 1
@@ -313,7 +313,7 @@
     "category": "Drink",
     "description": "Milkshake gourmand au chocolat et crème fouettée.",
     "price": 4.50,
-    "image": "https://example.com/images/milkshake-chocolat.jpg",
+    "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400",
     "size": ["25cl", "50cl"],
     "availability": true,
     "quantity": 1
@@ -324,7 +324,7 @@
     "category": "Drink",
     "description": "Milkshake à la vanille crémeux et rafraîchissant.",
     "price": 4.50,
-    "image": "https://example.com/images/milkshake-vanille.jpg",
+    "image": "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=400",
     "size": ["25cl", "50cl"],
     "availability": true,
     "quantity": 1
