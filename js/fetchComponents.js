@@ -94,7 +94,7 @@ export function Panier(){
             </button>
 
             <!-- Checkout Button -->
-            <button class="w-full bg-white text-[#860000] font-bold py-3 rounded-lg shadow-lg">
+            <button class="w-full bg-white text-[#860000] font-bold py-3 rounded-lg shadow-lg  "    href="../Pages/paiment.html" >
                 Checkout!
             </button>
         </div>
@@ -572,7 +572,7 @@ export function Map(){
 export function Brands(){
     return `<div>
   <div class="title-similare-reseto text-center m-10">
-    <h1 class="font-sauce text-[25px] md:text-5xl text-white">Similare <span class="text-[#91011A]">Resterant</span></h1>
+    <h1 class="font-sauce text-[25px] md:text-5xl text-white">Similar <span class="text-[#91011A]">Resterant</span></h1>
   </div>
   <div
     class="all-brands_here flex gap-4 m-4 relative max-w-7xl mx-auto overflow-x-auto overflow-y-hidden pb-4 snap-x  scrollbar-hide">
