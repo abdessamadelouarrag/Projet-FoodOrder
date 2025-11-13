@@ -93,8 +93,8 @@ export function Panier(){
             </button>
 
             <!-- Checkout Button -->
-            <button class="w-full bg-white text-[#860000] font-bold py-3 rounded-lg shadow-lg  "    href="../Pages/paiment.html" >
-                Checkout!
+            <button class="w-full bg-white text-[#860000] font-bold py-3 rounded-lg shadow-lg  "   >
+               <a href="../Pages/paiment.html">Checkout!</a>
             </button>
         </div>
     </div>
