@@ -7,6 +7,19 @@
 
 }
 
+
+.pizzaHov{
+    background-color: #03081F;
+    
+    border-radius: 20px;
+}
+.drinkHov{
+    background-color: #03081F;
+}
+.burgerHov{
+    background-color: #03081F;
+}
+
 .paginationdef1{
     background-color: #860000;
     color:  white;

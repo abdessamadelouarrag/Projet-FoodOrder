@@ -9,9 +9,17 @@ const page3 = document.querySelector("#page3")
 const page2 = document.querySelector("#page2")
 const page1 = document.querySelector("#page1")
 
+const burgerLi = document.querySelector("#burger")
+const pizzaLi = document.querySelector("#pizza")
+const drinkLi = document.querySelector("#drinks")
+
+
 const burger = document.querySelector("#burger a")
 const pizza = document.querySelector("#pizza a")
 const drinks = document.querySelector("#drinks a")
+
+
+
 
 function updatePlaceholder(e) {
     if (e.matches) {
@@ -32,30 +40,46 @@ fetch("../data/data.json")
 
             let card = document.createElement("div")
             card.id = data[e].id
+
             card.innerHTML = CardMenu(data[e])
             let btnPanier = card.querySelector("#btnPanier")
+
             card.addEventListener("click", () => {
                 window.location.href = `../Pages/details.html?id=${data[e].id}`;
             })
-            btnPanier.addEventListener("click", (event) => {
-                event.stopPropagation()
-                let exist = false
-                //
-                listProduit.forEach(p => {
-                    if (p.id === data[e].id) {
-                        exist = true
+            if (data[e].availability == true) {
+                console.log("mouad")
+                btnPanier.addEventListener("click", (event) => {
+                    event.stopPropagation()
+                    let exist = false
+                    //
+                    listProduit.forEach(p => {
+                        if (p.id === data[e].id) {
+                            exist = true
+                        }
+                    })
+                    if (exist) {
+                        alert("produit deja en panier")
+                    } else {
+                        listProduit.push(data[e])
+                        localStorage.setItem("produits", JSON.stringify(listProduit))
+                        alert("produit bien ajouter en panier")
                     }
-                })
-                if (exist) {
-                    alert("produit deja en panier")
-                } else {
-                    listProduit.push(data[e])
-                    localStorage.setItem("produits", JSON.stringify(listProduit))
-                    alert("produit bien ajouter en panier")
-                }
 
-            })
+                })
+
+
+            }
+            else {
+                btnPanier.addEventListener("click", (ev) => {
+                    ev.stopPropagation();
+                    alert("produit not available")
+
+                })
+            }
             container.append(card)
+
+
         }
     })
 fetch("../data/data.json")
@@ -65,88 +89,112 @@ fetch("../data/data.json")
         //had partie d search
         searchFilter.addEventListener('input', (event) => {
             if (searchFilter.value.length === 0) {
-                
+
                 containerCards.innerHTML = ""
                 for (let i = 0; i < 9; i++) {
 
-                    console.log("mouad")
+                    // console.log("mouad")
 
                     let card = document.createElement("div")
                     card.id = data[i].id
                     card.innerHTML = CardMenu(data[i])
-                    let btnPanier = card.querySelector("#btnPanier")
+
                     card.addEventListener("click", () => {
                         window.location.href = `../Pages/details.html?id=${data[i].id}`;
                     })
-                    btnPanier.addEventListener("click", (event) => {
-                        event.stopPropagation()
-                        let exist = false
-                        //
-                        listProduit.forEach(p => {
-                            if (p.id === data[i].id) {
-                                exist = true
+                    let btnPanier = card.querySelector("#btnPanier")
+                    if (data[i].availability == true) {
+                        btnPanier.addEventListener("click", (event) => {
+                            event.stopPropagation()
+                            let exist = false
+                            //
+                            listProduit.forEach(p => {
+                                if (p.id == data[i].id) {
+                                    exist = true
+                                }
+                            })
+                            if (exist) {
+                                alert("produit deja en panier")
+                            } else {
+                                listProduit.push(data[i])
+                                localStorage.setItem("produits", JSON.stringify(listProduit))
+                                alert("produit bien ajouter en panier")
                             }
-                        })
-                        if (exist) {
-                            alert("produit deja en panier")
-                        } else {
-                            listProduit.push(data[i])
-                            localStorage.setItem("produits", JSON.stringify(listProduit))
-                            alert("produit bien ajouter en panier")
-                        }
 
-                    })
+                        })
+                    } else {
+                        btnPanier.addEventListener("click", (ev) => {
+                            ev.stopPropagation();
+                            alert("produit not available")
+
+                        })
+                    }
+
+
                     container.append(card)
                 }
             }
-            else{
-            containerCards.innerHTML = ""
-            const valueSearch = searchFilter.value
+            else {
+                containerCards.innerHTML = ""
+                const valueSearch = searchFilter.value
 
-            data.filter(element => {
-                if (element.name.toLowerCase().includes(valueSearch.toLowerCase())) {
-                    let cardS = document.createElement("div")
-                    cardS.id = element.id
-                    cardS.innerHTML = CardMenu(element)
-                    containerCards.append(cardS)
-                    cardS.addEventListener("click", () => {
-                        window.location.href = `../Pages/details.html?id=${element.id}`;
-                    })
-                    let btnPanier = cardS.querySelector("#btnPanier")
-                    btnPanier.addEventListener("click", (event) => {
-                        event.stopPropagation()
-                        let exist = false
-                        //
-                        listProduit.forEach(p => {
-                            if (p.id === element.id) {
-                                exist = true
-                            }
+                data.filter(element => {
+                    if (element.name.toLowerCase().includes(valueSearch.toLowerCase())) {
+                        let cardS = document.createElement("div")
+                        cardS.id = element.id
+                        cardS.innerHTML = CardMenu(element)
+
+                        cardS.addEventListener("click", () => {
+                            window.location.href = `../Pages/details.html?id=${element.id}`;
                         })
-                        if (exist) {
-                            alert("produit deja en panier")
+                        let btnPanier = cardS.querySelector("#btnPanier")
+                        if (element.availability == true) {
+                            console.log("mouad")
+                            btnPanier.addEventListener("click", (event) => {
+                                event.stopPropagation()
+                                let exist = false
+                                //
+                                listProduit.forEach(p => {
+                                    if (p.id === element.id) {
+                                        exist = true
+                                    }
+                                })
+                                if (exist) {
+                                    alert("produit deja en panier")
+                                } else {
+                                    listProduit.push(element)
+                                    localStorage.setItem("produits", JSON.stringify(listProduit))
+                                    alert("produit bien ajouter en panier")
+                                }
+
+                            })
                         } else {
-                            listProduit.push(element)
-                            localStorage.setItem("produits", JSON.stringify(listProduit))
-                            alert("produit bien ajouter en panier")
+                            btnPanier.addEventListener("click", (ev) => {
+                                ev.stopPropagation();
+                                alert("produit not available")
+
+                            })
                         }
 
-                    })
 
 
 
 
+                        containerCards.append(cardS)
+
+                    }
 
 
-
-                }
-
-
-            })}
+                })
+            }
         })
 
 
 
         burger.addEventListener('click', e => {
+            burgerLi.classList.add("burgerHov")
+            pizzaLi.classList.remove("pizzaHov")
+            drinkLi.classList.remove("drinkHov")
             containerCards.innerHTML = "";
             data.filter(item => {
                 if (item.category.toLowerCase().includes(burger.textContent.toLowerCase())) {
@@ -154,25 +202,102 @@ fetch("../data/data.json")
                     cardS.id = item.id
                     cardS.innerHTML = CardMenu(item)
                     containerCards.append(cardS)
+                    cardS.addEventListener("click", () => {
+                        window.location.href = `../Pages/details.html?id=${item.id}`;
+                    })
+
+                    let btnPanier = cardS.querySelector("#btnPanier")
+                    if (item.availability == true) {
+                        btnPanier.addEventListener("click", (event) => {
+                            event.stopPropagation()
+                            let exist = false
+                            //
+                            listProduit.forEach(p => {
+                                if (p.id == item.id) {
+                                    exist = true
+                                }
+                            })
+                            if (exist) {
+                                alert("produit deja en panier")
+                            } else {
+                                listProduit.push(item)
+                                localStorage.setItem("produits", JSON.stringify(listProduit))
+                                alert("produit bien ajouter en panier")
+                            }
+
+                        })
+                    }
+                    else {
+                        btnPanier.addEventListener("click", (ev) => {
+                            ev.stopPropagation();
+                            alert("produit not available")
+
+                        })
+                    }
+
+
                 }
             })
 
         })
 
         pizza.addEventListener('click', e => {
+            burgerLi.classList.remove("burgerHov")
+            pizzaLi.classList.add("pizzaHov")
+            drinkLi.classList.remove("drinkHov")
             containerCards.innerHTML = "";
             data.filter(item => {
                 if (item.category.toLowerCase().includes(pizza.textContent.toLowerCase())) {
                     let cardS = document.createElement("div")
                     cardS.id = item.id
+
                     cardS.innerHTML = CardMenu(item)
+
+
+                    cardS.addEventListener("click", () => {
+                        window.location.href = `../Pages/details.html?id=${item.id}`;
+                    })
+                    let btnPanier = cardS.querySelector("#btnPanier")
+                    if (item.availability == true) {
+                        btnPanier.addEventListener("click", (event) => {
+                            event.stopPropagation()
+                            let exist = false
+
+                            listProduit.forEach(p => {
+                                if (p.id == item.id) {
+                                    exist = true
+                                }
+                            })
+                            if (exist) {
+                                alert("produit deja en panier")
+                            } else {
+                                listProduit.push(item)
+                                localStorage.setItem("produits", JSON.stringify(listProduit))
+                                alert("produit bien ajouter en panier")
+                            }
+
+                        })
+                    }
+                    else {
+                        btnPanier.addEventListener("click", (ev) => {
+                            ev.stopPropagation();
+                            alert("produit not available")
+
+                        })
+                    }
                     containerCards.append(cardS)
+
+
                 }
+
             })
 
         })
 
         drinks.addEventListener('click', e => {
+            burgerLi.classList.remove("burgerHov")
+            pizzaLi.classList.remove("pizzaHov")
+            drinkLi.classList.add("drinkHov")
             containerCards.innerHTML = "";
             data.filter(item => {
                 if (item.category.toLowerCase().includes("Drink".toLowerCase())) {
@@ -180,6 +305,37 @@ fetch("../data/data.json")
                     cardS.id = item.id
                     cardS.innerHTML = CardMenu(item)
                     containerCards.append(cardS)
+                    cardS.addEventListener("click", () => {
+                        window.location.href = `../Pages/details.html?id=${item.id}`;
+                    })
+                    let btnPanier = cardS.querySelector("#btnPanier")
+                    if (item.availability == true) {
+                        btnPanier.addEventListener("click", (event) => {
+                            event.stopPropagation()
+                            let exist = false
+                            //
+                            listProduit.forEach(p => {
+                                if (p.id == item.id) {
+                                    exist = true
+                                }
+                            })
+                            if (exist) {
+                                alert("produit deja en panier")
+                            } else {
+                                listProduit.push(item)
+                                localStorage.setItem("produits", JSON.stringify(listProduit))
+                                alert("produit bien ajouter en panier")
+                            }
+
+                        })
+                    }
+                    else {
+                        btnPanier.addEventListener("click", (ev) => {
+                            ev.stopPropagation();
+                            alert("produit not available")
+
+                        })
+                    }
                 }
             })
 
@@ -197,31 +353,45 @@ fetch("../data/data.json")
                 let cardS = document.createElement("div")
                 cardS.id = data[j].id
                 cardS.innerHTML = CardMenu(data[j])
-                containerCards.append(cardS)
+
 
                 cardS.addEventListener("click", () => {
-                    window.location.href = `../Pages/details.html?id=${j.id}`;
+                    window.location.href = `../Pages/details.html?id=${data[j].id}`;
                 })
+
 
                 let btnPanier = cardS.querySelector("#btnPanier")
-                btnPanier.addEventListener("click", (event) => {
-                    event.stopPropagation()
-                    let exist = false
-                    //
-                    listProduit.forEach(p => {
-                        if (p.id === e.id) {
-                            exist = true
-                        }
-                    })
-                    if (exist) {
-                        alert("produit deja en panier")
-                    } else {
-                        listProduit.push(e)
-                        localStorage.setItem("produits", JSON.stringify(listProduit))
-                        alert("produit bien ajouter en panier")
-                    }
+                if (data[j].availability == true) {
 
-                })
+                    btnPanier.addEventListener("click", (even) => {
+                        even.stopPropagation()
+                        let exist = false
+                        //
+                        listProduit.forEach(p => {
+                            if (p.id === data[j].id) {
+                                exist = true
+                            }
+                        })
+                        if (exist) {
+                            alert("produit deja en panier")
+                        } else {
+                            listProduit.push(data[j])
+                            localStorage.setItem("produits", JSON.stringify(listProduit))
+                            alert("produit bien ajouter en panier")
+                        }
+
+                    })
+                }
+
+                else {
+                    btnPanier.addEventListener("click", (ev) => {
+                        ev.stopPropagation();
+                        alert("produit not available")
+
+                    })
+                }
+                containerCards.append(cardS)
+
             }
         })
 
@@ -242,24 +412,36 @@ fetch("../data/data.json")
                 })
 
                 let btnPanier = cardS.querySelector("#btnPanier")
-                btnPanier.addEventListener("click", (event) => {
-                    event.stopPropagation()
-                    let exist = false
-                    //
-                    listProduit.forEach(p => {
-                        if (p.id === e.id) {
-                            exist = true
+                if (data[i].availability == true) {
+                    btnPanier.addEventListener("click", (event) => {
+                        event.stopPropagation()
+                        let exist = false
+                        //
+                        listProduit.forEach(p => {
+                            if (p.id === data[i].id) {
+                                exist = true
+                            }
+                        })
+                        if (exist) {
+                            alert("produit deja en panier")
+                        } else {
+                            listProduit.push(data[i])
+                            localStorage.setItem("produits", JSON.stringify(listProduit))
+                            alert("produit bien ajouter en panier")
                         }
-                    })
-                    if (exist) {
-                        alert("produit deja en panier")
-                    } else {
-                        listProduit.push(e)
-                        localStorage.setItem("produits", JSON.stringify(listProduit))
-                        alert("produit bien ajouter en panier")
-                    }
 
-                })
+                    })
+                }
+                else {
+                    btnPanier.addEventListener("click", (ev) => {
+                        ev.stopPropagation();
+                        alert("produit not available")
+
+                    })
+
+
+                }
+
             }
         })
 
@@ -273,31 +455,43 @@ fetch("../data/data.json")
                 let cardS = document.createElement("div")
                 cardS.id = data[i].id
                 cardS.innerHTML = CardMenu(data[i])
-                containerCards.append(cardS)
+
 
                 cardS.addEventListener("click", () => {
                     window.location.href = `../Pages/details.html?id=${e.id}`;
                 })
 
                 let btnPanier = cardS.querySelector("#btnPanier")
-                btnPanier.addEventListener("click", (event) => {
-                    event.stopPropagation()
-                    let exist = false
-                    //
-                    listProduit.forEach(p => {
-                        if (p.id === e.id) {
-                            exist = true
+                if (data[i].availability == true) {
+                    btnPanier.addEventListener("click", (event) => {
+                        event.stopPropagation()
+                        let exist = false
+                        //
+                        listProduit.forEach(p => {
+                            if (p.id === data[i].id) {
+                                exist = true
+                            }
+                        })
+                        if (exist) {
+                            alert("produit deja en panier")
+                        } else {
+                            listProduit.push(data[i])
+                            localStorage.setItem("produits", JSON.stringify(listProduit))
+                            alert("produit bien ajouter en panier")
                         }
-                    })
-                    if (exist) {
-                        alert("produit deja en panier")
-                    } else {
-                        listProduit.push(e)
-                        localStorage.setItem("produits", JSON.stringify(listProduit))
-                        alert("produit bien ajouter en panier")
-                    }
 
-                })
+                    })
+                }
+                else {
+
+                    btnPanier.addEventListener("click", (ev) => {
+                        ev.stopPropagation();
+                        alert("produit not available")
+
+                    })
+                }
+
+                containerCards.append(cardS)
             }
         })
 
