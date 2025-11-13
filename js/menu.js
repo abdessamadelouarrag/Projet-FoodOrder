@@ -12,7 +12,7 @@ const page1 = document.querySelector("#page1")
 const burger = document.querySelector("#burger a")
 const pizza = document.querySelector("#pizza a")
 const drinks = document.querySelector("#drinks a")
-
+let forjsupdate =0
 function updatePlaceholder(e) {
     if (e.matches) {
         searchFilter.placeholder = 'Search';
@@ -51,7 +51,14 @@ fetch("../data/data.json")
                 } else {
                     listProduit.push(data[e])
                     localStorage.setItem("produits", JSON.stringify(listProduit))
+// //                     // Reset cart UI
+//                     document.getElementById('elemnt-ajouter').innerHTML=""
+//                     document.querySelectorAll('.totalPanier').forEach(el => el.textContent = '0');
+//                     forjsupdate++
+//                     import('../js/panier.js?ts=' + forjsupdate);
+// //                     //---------------------------- by amine
                     alert("produit bien ajouter en panier")
+                    location.reload()
                 }
 
             })

@@ -56,7 +56,7 @@ fetch('../data/data.json')
                 priceStock = e.price;
 
                 for (let i = 0; i < priceSizeFetch.length; i++) {
-                    priceSizeFetch[i].textContent = e.price;
+                    priceSizeFetch[i].textContent = e.price * (i+1);
                 }
             }
         })
