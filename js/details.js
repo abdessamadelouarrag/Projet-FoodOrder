@@ -99,15 +99,17 @@ minusPriceValue.addEventListener('click', () => {
 
 btnAddToCard.addEventListener("click", () => {
     const nbrTotal = document.querySelector("#number-total-food").textContent;
-    const p = listPanier.find(e => {
-        e.id == id
-    })
-    if(p!== null){
+    const p = listPanier.find(e => e.id == id);
+
+    if(p){
+        
+        p.quantity += Number(nbrTotal);
+    } else {
+       
         produit.quantity = Number(nbrTotal);
-    }else{
-        produit.quantity = Number(nbrTotal);
-        listPanier.push(produit)
+        listPanier.push(produit);
     }
 
+    alert('you add the product in card go back to buy you food');
     localStorage.setItem("produits", JSON.stringify(listPanier));
-})
+});
