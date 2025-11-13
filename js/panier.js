@@ -65,7 +65,7 @@ cartProduct.forEach(product=>{
 
         localStorage.setItem("produits",JSON.stringify(cartProduct))
 
-        document.querySelector('.totalPanier').textContent = (parseFloat(document.querySelector('.totalPanier').textContent)-parseFloat(product.price)).toFixed(2).toString()
+        document.querySelector('.totalPanier').textContent = (parseFloat(document.querySelector('.totalPanier').textContent)- ( parseFloat(product.price)*parseInt(product.quantity)    )).toFixed(2).toString()
         document.querySelectorAll('.totalPanier')[1].textContent = document.querySelector('.totalPanier').textContent
     })}catch{console.log("fuck u3 ")}
 //--------------------------------
