@@ -119,6 +119,7 @@ fetch("../data/data.json")
                             } else {
                                 listProduit.push(data[i])
                                 localStorage.setItem("produits", JSON.stringify(listProduit))
+                                location.reload()
                                 alert("produit bien ajouter en panier")
                             }
 
@@ -165,6 +166,7 @@ fetch("../data/data.json")
                                 } else {
                                     listProduit.push(element)
                                     localStorage.setItem("produits", JSON.stringify(listProduit))
+                                    location.reload()
                                     alert("produit bien ajouter en panier")
                                 }
 
