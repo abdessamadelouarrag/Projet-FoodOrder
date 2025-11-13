@@ -1,6 +1,6 @@
 function createCarouselCard(item) {
   return `
-    <div class="flex-shrink-0 w-[calc(50%-0.75rem)] sm:w-[calc(50%-1rem)]">
+    <div class="flex-shrink-0 w-[calc(50%-0.75rem)] sm:w-[calc(50%-1rem)] onclick="window.location.href='../Pages/details.html?id=${item.id}'">
       <div class="bg-[#222222] rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 h-full">
         <div class="flex-1 text-center sm:text-left">
           <h2 class="text-white text-base sm:text-lg md:text-xl font-bold mb-2">
@@ -12,7 +12,7 @@ function createCarouselCard(item) {
           <div class="bg-red-600 text-white font-bold px-3 py-1.5 rounded-lg inline-block text-xs sm:text-sm">
             MAD ${item.price}
           </div>
-        </div>
+        </div>  
         <div class="relative flex-shrink-0">
           <div class="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden bg-gradient-to-br from-red-900 to-orange-800">
             <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover" onerror="this.src='./assets/images/home_img/carousel1.png'">
@@ -79,6 +79,7 @@ function initCarousel(containerId, items, title, titleColor) {
   }
   
   nextBtn.addEventListener('click', () => {
+    
     if (currentPosition < maxPosition) {
       currentPosition++;
     } else {
@@ -158,25 +159,25 @@ function initializeCarousels() {
     .catch(err => console.error('Error loading carousels:', err));
 }
 
-// function addToCart(id) {
-//   fetch('./data/data.json')
-//     .then(res => res.json())
-//     .then(data => {
-//       const item = data.find(e => e.id === id);
-//       let listProduit = JSON.parse(localStorage.getItem("produits")) || [];
+function addToCart(id) {
+  fetch('./data/data.json')
+    .then(res => res.json())
+    .then(data => {
+      const item = data.find(e => e.id === id);
+      let listProduit = JSON.parse(localStorage.getItem("produits")) || [];
       
-//       const exist = listProduit.some(p => p.id === id);
+      const exist = listProduit.some(p => p.id === id);
       
-//       if (exist) {
-//         alert("Produit déjà dans le panier");
-//       } else {
-//         listProduit.push(item);
-//         localStorage.setItem("produits", JSON.stringify(listProduit));
-//         alert("Produit ajouté au panier");
-//       }
-//     })
-//     .catch(err => console.error('Error:', err));
-// }
+      if (exist) {
+        alert("Produit déjà dans le panier");
+      } else {
+        listProduit.push(item);
+        localStorage.setItem("produits", JSON.stringify(listProduit));
+        alert("Produit ajouté au panier");
+      }
+    })
+    .catch(err => console.error('Error:', err));
+}
 
 const burgerImages = [
   "./assets/images/home_img/carousel1.png",  
