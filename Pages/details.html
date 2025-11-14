@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>page details</title>
+  <meta name="keywords"
+    content="FoodOrder+, dish details, pizza, deluxe pizza, similar food, restaurant menu, food details page, portion size, small medium large, price in MAD, add to cart, online food ordering, Moroccan restaurant, Tailwind CSS, responsive food menu">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
@@ -35,90 +37,102 @@
 </head>
 
 <body class="bg-[#101018] w-full">
-<section>
-  <div
+  <section>
+    <div
       class="absolute top-4 md:top-12 left-4 md:left-12 flex justify-center items-center bg-[#91011A] rounded-full shadow-lg cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:bg-[#b91329] transition-colors duration-300">
-      <a href="../Pages/menu.html"><img src="../assets/images/icon/Vector left.png" alt="left arrow" class="w-5 h-5 md:w-5 md:h-5" /></a>
+      <a href="../Pages/menu.html#MENU"><img src="../assets/images/icon/Vector left.png" alt="left arrow"
+          class="w-5 h-5 md:w-5 md:h-5" /></a>
     </div>
-  <div class="all-part-details h-fit pb-10 sm:bg-[#121212] sm:mx-4 md:mx-10 lg:mx-24 mt-14 px-10 pt-11 rounded-[10px]">
-    <h1 class="flex justify-center items-center text-4xl sm:text-5xl lg:text-6xl text-white text-center mb-10 font-myfont gap-3">
-      Dish <span class="text-[#91011A]"> Details</span>
-    </h1>
+    <div
+      class="all-part-details h-fit pb-10 sm:bg-[#121212] sm:mx-4 md:mx-10 lg:mx-24 mt-14 px-10 pt-11 rounded-[10px]">
+      <h1
+        class="flex justify-center items-center text-4xl sm:text-5xl lg:text-6xl text-white text-center mb-10 font-myfont gap-3">
+        Dish <span class="text-[#91011A]"> Details</span>
+      </h1>
 
-    <div class="card-details-food text-white bg-[#91011A] p-5 sm:p-7 lg:p-9 rounded-lg">
-      <!-- Top part -->
-      <div class="part-top-dtails-card flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="text-details text-center md:text-left">
-          <h1 class="title-food font-bold text-2xl sm:text-3xl lg:text-3xl">Deluxe Pizza</h1>
-          <p class="description-food mt-4 sm:mt-6 text-base sm:text-lg lg:text-[20px] leading-relaxed">
-            1 McChicken™, 1 Big Mac™, 1 Royal <br class="hidden sm:block"> Cheeseburger, 3 medium sized French Fries, <br class="hidden sm:block"> 3 cold drinks
-          </p>
-        </div>
-
-        <div class="image-details w-[150px] sm:w-[200px] md:w-[250px]">
-          <img src="/assets/images/details-image/pizza.png" alt="pizza" class="image-url w-full h-auto rounded-2xl">
-        </div>
-      </div>
-
-      <!-- Size buttons -->
-      <div class="btn-choix-size flex flex-col sm:flex-row gap-3 mt-8 w-full sm:w-[80%] md:w-[60%] lg:w-[60%]">
-        <div class="btn-choix bg-white flex justify-between items-center w-full rounded-md cursor-pointer p-2">
-          <div class="size-food text-[#121212] font-bold">Small</div>
-          <div class="price-size bg-[#121212] text-white px-4 py-2 rounded-md text-center"><span class="priceT">5</span>MAD</div>
-        </div>
-        <div class="btn-choix bg-white flex justify-between items-center w-full rounded-md cursor-pointer p-2">
-          <div class="size-food text-[#121212] font-bold">Medium</div>
-          <div class="price-size bg-[#121212] text-white px-4 py-2 rounded-md text-center"><span class="priceT">5</span>MAD</div>
-        </div>
-        <div class="btn-choix bg-white flex justify-between items-center w-full rounded-md cursor-pointer p-2">
-          <div class="size-food text-[#121212] font-bold">Large</div>
-          <div class="price-size bg-[#121212] text-white px-4 py-2 rounded-md text-center"><span class="priceT">5</span>MAD</div>
-        </div>
-      </div>
-
-      <!-- Quantity and total -->
-      <div class="price-btn-and-total flex flex-col sm:flex-row justify-between items-center gap-5 mt-10">
-        <!-- Quantity buttons -->
-        <div class="btn-how-much flex gap-3">
-          <button class="btn-minus flex justify-center items-center w-7 h-7 rounded-full bg-white text-[#91011A] mt-2">
-            <i class="fas fa-minus text-lg"></i>
-          </button>
-          <div class="numbers-btn bg-white text-black w-12 h-12 flex justify-center items-center font-bold text-xl rounded-md">
-            <span id="number-total-food">1</span>
-          </div>
-          <button class="btn-plus flex justify-center items-center w-7 h-7 rounded-full bg-white text-[#91011A] mt-2">
-            <i class="fas fa-plus text-lg"></i>
-          </button>
-        </div>
-
-        <!-- Total & add to cart -->
-        <div class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 w-full sm:w-auto justify-between">
-          <div class="total-price bg-[#860000] flex gap-2 h-12 sm:h-14 w-32 sm:w-36 justify-center items-center rounded-md text-lg sm:text-xl">
-            <span id="total-price">5</span>
-            <span class="border-l-2 px-2">MAD</span>
+      <div class="card-details-food text-white bg-[#91011A] p-5 sm:p-7 lg:p-9 rounded-lg">
+        <!-- Top part -->
+        <div class="part-top-dtails-card flex flex-col md:flex-row justify-between items-center gap-6">
+          <div class="text-details text-center md:text-left">
+            <h1 class="title-food font-bold text-2xl sm:text-3xl lg:text-3xl">Deluxe Pizza</h1>
+            <p class="description-food mt-4 sm:mt-6 text-base sm:text-lg lg:text-[20px] leading-relaxed">
+              1 McChicken™, 1 Big Mac™, 1 Royal <br class="hidden sm:block"> Cheeseburger, 3 medium sized French Fries,
+              <br class="hidden sm:block"> 3 cold drinks
+            </p>
           </div>
 
-          <div class="btn-add-to-card flex bg-[#FC8A06] w-full sm:w-[250px] h-14 sm:h-16 p-2 justify-center items-center rounded-lg cursor-pointer hover:bg-[#BC6F05] gap-2">
-            <h1 class="text-[16px] sm:text-[20px] font-bold"><a href="/Pages/paiment.html">ADD TO CART</a></h1>
-            <img src="/assets/images/details-image/shopping-cart.png" alt="shopping-cart" class="w-6 sm:w-8">
+          <div class="image-details w-[150px] sm:w-[200px] md:w-[250px]">
+            <img src="/assets/images/details-image/pizza.png" alt="pizza" class="image-url w-full h-auto rounded-2xl">
+          </div>
+        </div>
+
+        <!-- Size buttons -->
+        <div class="btn-choix-size flex flex-col sm:flex-row gap-3 mt-8 w-full sm:w-[80%] md:w-[60%] lg:w-[60%]">
+          <div class="btn-choix bg-white flex justify-between items-center w-full rounded-md cursor-pointer p-2">
+            <div class="size-food text-[#121212] font-bold">Small</div>
+            <div class="price-size bg-[#121212] text-white px-4 py-2 rounded-md text-center"><span
+                class="priceT">5</span>MAD</div>
+          </div>
+          <div class="btn-choix bg-white flex justify-between items-center w-full rounded-md cursor-pointer p-2">
+            <div class="size-food text-[#121212] font-bold">Medium</div>
+            <div class="price-size bg-[#121212] text-white px-4 py-2 rounded-md text-center"><span
+                class="priceT">5</span>MAD</div>
+          </div>
+          <div class="btn-choix bg-white flex justify-between items-center w-full rounded-md cursor-pointer p-2">
+            <div class="size-food text-[#121212] font-bold">Large</div>
+            <div class="price-size bg-[#121212] text-white px-4 py-2 rounded-md text-center"><span
+                class="priceT">5</span>MAD</div>
+          </div>
+        </div>
+
+        <!-- Quantity and total -->
+        <div class="price-btn-and-total flex flex-col sm:flex-row justify-between items-center gap-5 mt-10">
+          <!-- Quantity buttons -->
+          <div class="btn-how-much flex gap-3">
+            <button
+              class="btn-minus flex justify-center items-center w-7 h-7 rounded-full bg-white text-[#91011A] mt-2">
+              <i class="fas fa-minus text-lg"></i>
+            </button>
+            <div
+              class="numbers-btn bg-white text-black w-12 h-12 flex justify-center items-center font-bold text-xl rounded-md">
+              <span id="number-total-food">1</span>
+            </div>
+            <button class="btn-plus flex justify-center items-center w-7 h-7 rounded-full bg-white text-[#91011A] mt-2">
+              <i class="fas fa-plus text-lg"></i>
+            </button>
+          </div>
+
+          <!-- Total & add to cart -->
+          <div class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 w-full sm:w-auto justify-between">
+            <div
+              class="total-price bg-[#860000] flex gap-2 h-12 sm:h-14 w-32 sm:w-36 justify-center items-center rounded-md text-lg sm:text-xl">
+              <span id="total-price">5</span>
+              <span class="border-l-2 px-2">MAD</span>
+            </div>
+
+            <div
+              class="btn-add-to-card flex bg-[#FC8A06] w-full sm:w-[250px] h-14 sm:h-16 p-2 justify-center items-center rounded-lg cursor-pointer hover:bg-[#BC6F05] gap-2">
+              <h1 class="text-[16px] sm:text-[20px] font-bold"><a href="/Pages/paiment.html">ADD TO CART</a></h1>
+              <img src="/assets/images/details-image/shopping-cart.png" alt="shopping-cart" class="w-6 sm:w-8">
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section id="foodSimilar">
-  <div class="title flex text-center justify-center text-3xl m-10 md:text-center md:text-6xl font-myfont">
-    <h1 class="text-[#91011A]">Similar <span class="text-white">Food</span></h1>
-  </div>
+  </section>
+  <section id="foodSimilar">
+    <div class="title flex text-center justify-center text-3xl m-10 md:text-center md:text-6xl font-myfont">
+      <h1 class="text-[#91011A]">Similar <span class="text-white">Food</span></h1>
+    </div>
 
-  <div id="SimilarFood" class="grid grid-cols-1 gap-5 m-6 md:grid-cols-3"></div>
-</section>
+    <div id="SimilarFood" class="grid grid-cols-1 gap-5 m-6 md:grid-cols-3"></div>
+  </section>
 
-<section id="brands"></section>
-<footer id="footer"></footer>
+  <section id="brands"></section>
+  <footer id="footer"></footer>
 
 </body>
 <script type="module" src="../js/details.js"></script>
 <script type="module" src="../js/fetchComponents.js"></script>
+
 </html>

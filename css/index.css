@@ -1,0 +1,48 @@
+body {
+        background-image: url("./assets/images/home_img/background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        padding: 0;
+      }
+
+      .overlay {
+        background-color: rgba(14, 14, 22, 0.86);
+      }
+
+      #hero_text {
+        background: linear-gradient(90deg, #a9291d, #260206);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      h1 {
+        font-family: "Sauce Tomato", sans-serif;
+      }
+
+      #font {
+        font-family: "Sauce Tomato", sans-serif;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .footer-heading {
+        color: #860000;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .app-store-btn {
+        transition: transform 0.2s;
+      }
+
+      .app-store-btn:hover {
+        transform: translateY(-2px);
+      }

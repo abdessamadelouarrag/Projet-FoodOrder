@@ -1,296 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <style>
-      body {
-        background-image: url("./assets/images/home_img/background.jpg");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        padding: 0;
-      }
 
-      .overlay {
-        background-color: rgba(14, 14, 22, 0.86);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>page home</title>
+  <meta name="keywords"
+    content="Smoky Cheezy Burger, burger restaurant, fast food, street food, gourmet burger, cheesy burger, best sellers, today’s menu, local restaurant, food ordering, order now, customer reviews, burgers and fries, Moroccan street food, Tailwind CSS, GSAP animations, FoodOrder+ home page">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
 
-      #hero_text {
-        background: linear-gradient(90deg, #a9291d, #260206);
-        background-clip: text;
-        color: transparent;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+<body>
+  <header>
+    <nav id="navbar"></nav>
+  </header>
+  <main class="overlay relative inset-0">
+    <section class="bg-[#101018] min-h-screen p-4 sm:p-6 lg:p-8 relative overflow-hidden">
+      <h1 id="hero_text"
+        class="text-center text-[3rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] leading-tight tracking-wider font-black p-2 sm:p-4">
+        SMOKY <br />
+        <span class="text-[3.5rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem]">CHEEZY</span> <br />
+        <span class="text-[4rem] sm:text-[7rem] md:text-[9rem] lg:text-[12rem]">BURGER</span>
+      </h1>
+      <div id="burger-carousel"
+        class="absolute left-[58%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[15rem] sm:w-[25rem] md:w-[20rem] lg:w-[40rem] h-auto">
+        <img id="burger-image" src="./assets/images/home_img/carousel1.png" alt="Burger"
+          class="w-[70%] h-auto drop-shadow-[0_0_25px_rgba(0,0,0,0.8)]" />
+      </div>
+      <div class="absolute top-[2%] right-[4%] rotate-[-19deg] w-16 sm:w-24 md:w-32 lg:w-auto">
+        <img src="./assets/images/home_img/carousel.png" alt="" class="w-full" />
+      </div>
+    </section>
 
-      h1 {
-        font-family: "Sauce Tomato", sans-serif;
-      }
 
-      #font {
-        font-family: "Sauce Tomato", sans-serif;
-      }
+    <section class="min-h-auto relative mt-8 sm:mt-12 px-0 sm:px-4 lg:px-10">
+      <div id="todays-menu-carousel">
+      </div>
+    </section>
 
-      body {
-        font-family: "Inter", sans-serif;
-      }
-
-      .footer-heading {
-        color: #860000;
-        font-weight: 600;
-        font-size: 14px;
-        margin-bottom: 20px;
-        font-weight: bold;
-      }
-
-      .app-store-btn {
-        transition: transform 0.2s;
-      }
-
-      .app-store-btn:hover {
-        transform: translateY(-2px);
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav id="navbar"></nav>
-    </header>
-    <main class="overlay relative inset-0">
-      <section class="bg-[#101018] min-h-screen p-4 sm:p-6 lg:p-8 relative overflow-hidden">
-        <h1
-          id="hero_text"
-          class="text-center text-[3rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] leading-tight tracking-wider font-black p-2 sm:p-4"
-        >
-          SMOKY <br />
-          <span class="text-[3.5rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem]">CHEEZY</span> <br />
-          <span class="text-[4rem] sm:text-[7rem] md:text-[9rem] lg:text-[12rem]">BURGER</span>
-        </h1>
-        <div id="burger-carousel" class="absolute left-[58%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[15rem] sm:w-[25rem] md:w-[20rem] lg:w-[40rem] h-auto">
-          <img
-            id="burger-image"
-            src="./assets/images/home_img/carousel1.png"
-            alt="Burger"
-            class="w-[70%] h-auto drop-shadow-[0_0_25px_rgba(0,0,0,0.8)]"
-          />
+    <section class="min-h-auto relative px-0 sm:px-4 lg:px-10">
+      <div id="best-sells-carousel">
+      </div>
+    </section>
+    <section class="relative min-h-[400px] sm:min-h-[500px] bg-[#3B0809] overflow-hidden mt-12 sm:mt-16 mb-12 sm:mb-16">
+      <div class="container mx-auto px-4 sm:px-8 py-12 sm:py-16 grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
+        <div class="relative order-2 md:order-1">
+          <img src="./assets/images/home_img/history.png" alt="Pizza slices"
+            class="relative z-10 w-full max-w-md mx-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-300" />
         </div>
-        <div class="absolute top-[2%] right-[4%] rotate-[-19deg] w-16 sm:w-24 md:w-32 lg:w-auto">
-          <img src="./assets/images/home_img/carousel.png" alt="" class="w-full" />
-        </div>
-      </section>
 
-   
-      <section class="min-h-auto relative mt-8 sm:mt-12 px-0 sm:px-4 lg:px-10">
-        <div id="todays-menu-carousel">
+        <div class="text-white space-y-6 sm:space-y-9 order-1 md:order-2 text-center md:text-left">
+          <h2 id="font" class=" text-6xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-red-300 items-start "
+            style="line-height:1.5">
+            Flavor That<br />Makes History
+          </h2>
+          <p class="text-gray-200 text-base sm:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+            Every bite bold, smoky, and unforgettable. Every bite bold, smoky, and unforgettable. Every bite bold,
+            smoky, and unforgettable.
+          </p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="min-h-auto relative px-0 sm:px-4 lg:px-10">
-        <div id="best-sells-carousel">
+    <section class="relative min-h-[400px] py-12 sm:py-16">
+      <div class="container mx-auto px-4 sm:px-8 grid md:grid-cols-2 gap-8 sm:gap-12">
+        <div class="relative">
+          <img src="./assets/images/home_img/local.jpg" alt="Restaurant"
+            class="w-full rounded-3xl shadow-2xl object-cover h-[300px] sm:h-[400px] md:h-[600px]" />
         </div>
-      </section>
 
-      <!-- <section class="relative mb-12 sm:mb-16 px-4 sm:px-8 lg:px-14">
-        <h1 class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12">
-          Full <span class="text-[#860000]">Menu</span>
-        </h1>
-            
-        <div id="menu_container" class="grid grid-cols- md:grid-cols- lg:grid-cols- gap-6">
+        <div class="text-white space-y-4 sm:space-y-6 flex flex-col justify-center">
+          <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
+            Born from a love for good food and chill moments, our place isn't just about eating — it's about living the
+            full experience.
+          </p>
+          <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
+            From juicy burgers and loaded fries to Moroccan-inspired twists,
+            every bite is made with fresh ingredients, a lot of passion, and
+            that local touch that makes it special. Born from a love for good
+            food and chill moments, our place isn't just about eating — it's
+            about living the full experience. From juicy burgers and loaded
+            fries to Moroccan-inspired twists, every bite is made with fresh
+            ingredients, a lot of passion, and that local touch that makes it
+            special. Born from a love for good food and chill moments, our
+            place isn't just about eating — it's about living the full
+            experience. From juicy burgers and loaded fries to
+            Moroccan-inspired twists, every bite is made with fresh
+            ingredients, a lot of passion, and that local touch that makes it
+            special. </p>
+          <button
+            class="bg-[#860000] hover:bg-red-800 w-full sm:w-[70%] md:w-[50%] text-white font-bold px-8 sm:px-12 py-3 rounded-full transition-colors duration-300 mt-4">
+            <a href="./Pages/about.html">View more</a>
+          </button>
         </div>
-      </section> -->
+      </div>
+    </section>
 
-      <section class="relative min-h-[400px] sm:min-h-[500px] bg-[#3B0809] overflow-hidden mt-12 sm:mt-16 mb-12 sm:mb-16">
-        <div class="container mx-auto px-4 sm:px-8 py-12 sm:py-16 grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
-          <div class="relative order-2 md:order-1">
-            <img
-              src="./assets/images/home_img/history.png"
-              alt="Pizza slices"
-              class="relative z-10 w-full max-w-md mx-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-300"
-            />
+    <section id="brands" class="relative py-12 sm:py-20">
+
+
+      </div>
+    </section>
+
+    <section class="relative w-full min-h-screen overflow-hidden py-12 sm:py-16 lg:py-4">
+      <div class="container mx-auto px-4 sm:px-8">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="order-2 md:order-1">
+            <img src="./assets/images/home_img/order.png" alt="Crispy Fried Chicken"
+              class="w-full h-auto object-cover rounded-lg max-w-md mx-auto" />
           </div>
 
-          <div class="text-white space-y-6 sm:space-y-9 order-1 md:order-2 text-center md:text-left">
-             <h2
-              id="font"
-              class=" text-6xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-red-300 items-start " style="line-height:1.5"
-            >
-              Flavor That<br />Makes History
-            </h2>
-            <p class="text-gray-200 text-base sm:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-              Every bite bold, smoky, and unforgettable. Every bite bold, smoky, and unforgettable. Every bite bold, smoky, and unforgettable.
+          <div class="flex flex-col gap-8 sm:gap-12 order-1 md:order-2 text-center md:text-left">
+            <div class="md:-rotate-12">
+              <h1
+                class="text-6xl sm:text-6xl md:text-7xl lg:text-9xl font-black text-yellow-400 leading-none mb-4 transform -rotate-3">
+                Order
+              </h1>
+              <h1
+                class="text-6xl sm:text-6xl md:text-7xl lg:text-9xl font-black text-yellow-500 leading-none transform -rotate-2">
+                now
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 sm:py-16">
+      <h2 id="font" class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-12 sm:mb-16">
+        <span class="text-white">Customer </span>
+        <span class="text-[#860000]">reviews</span>
+      </h2>
+
+      <div class="w-full px-4 sm:px-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <img src="./assets/images/home_img/téléchargement (13).jpg" alt="St Gix"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover" />
+                <div>
+                  <h3 class="font-bold text-gray-900 text-sm sm:text-base">St Gix</h3>
+                  <p class="text-xs sm:text-sm text-gray-600">South London</p>
+                </div>
+              </div>
+              <div class="flex gap-0.5 sm:gap-1">
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-yellow-500 w-4"><img src="./assets/images/home_img/watch.png" alt="" /></span>
+              <span class="text-xs sm:text-sm text-gray-600">24th September, 2023</span>
+            </div>
+            <p class="text-gray-700 leading-relaxed text-xs sm:text-sm">
+              The positive aspect was undoubtedly the efficiency of the service. The queue moved quickly, the staff was
+              friendly, and the food was up to the usual McDonald's standard – hot and satisfying.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <img src="./assets/images/home_img/téléchargement (8).jpg" alt="St Gix"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover" />
+                <div>
+                  <h3 class="font-bold text-gray-900 text-sm sm:text-base">St Gix</h3>
+                  <p class="text-xs sm:text-sm text-gray-600">South London</p>
+                </div>
+              </div>
+              <div class="flex gap-0.5 sm:gap-1">
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-yellow-500 w-4"><img src="./assets/images/home_img/watch.png" alt="" /></span>
+              <span class="text-xs sm:text-sm text-gray-600">24th September, 2023</span>
+            </div>
+            <p class="text-gray-700 leading-relaxed text-xs sm:text-sm">
+              The positive aspect was undoubtedly the efficiency of the service. The queue moved quickly, the staff was
+              friendly, and the food was up to the usual McDonald's standard – hot and satisfying.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <img src="./assets/images/home_img/téléchargement (9).jpg" alt="St Gix"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover" />
+                <div>
+                  <h3 class="font-bold text-gray-900 text-sm sm:text-base">St Gix</h3>
+                  <p class="text-xs sm:text-sm text-gray-600">South London</p>
+                </div>
+              </div>
+              <div class="flex gap-0.5 sm:gap-1">
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+                <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-yellow-500 w-4"><img src="./assets/images/home_img/watch.png" alt="" /></span>
+              <span class="text-xs sm:text-sm text-gray-600">24th September, 2023</span>
+            </div>
+            <p class="text-gray-700 leading-relaxed text-xs sm:text-sm">
+              The positive aspect was undoubtedly the efficiency of the service. The queue moved quickly, the staff was
+              friendly, and the food was up to the usual McDonald's standard – hot and satisfying.
             </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="relative min-h-[400px] py-12 sm:py-16">
-        <div class="container mx-auto px-4 sm:px-8 grid md:grid-cols-2 gap-8 sm:gap-12">
-          <div class="relative">
-            <img
-              src="./assets/images/home_img/local.jpg"
-              alt="Restaurant"
-              class="w-full rounded-3xl shadow-2xl object-cover h-[300px] sm:h-[400px] md:h-[600px]"
-            />
-          </div>
 
-          <div class="text-white space-y-4 sm:space-y-6 flex flex-col justify-center">
-            <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
-              Born from a love for good food and chill moments, our place isn't just about eating — it's about living the full experience.
-            </p>
-            <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
- From juicy burgers and loaded fries to Moroccan-inspired twists,
-              every bite is made with fresh ingredients, a lot of passion, and
-              that local touch that makes it special. Born from a love for good
-              food and chill moments, our place isn't just about eating — it's
-              about living the full experience. From juicy burgers and loaded
-              fries to Moroccan-inspired twists, every bite is made with fresh
-              ingredients, a lot of passion, and that local touch that makes it
-              special. Born from a love for good food and chill moments, our
-              place isn't just about eating — it's about living the full
-              experience. From juicy burgers and loaded fries to
-              Moroccan-inspired twists, every bite is made with fresh
-              ingredients, a lot of passion, and that local touch that makes it
-              special.            </p>
-            <button class="bg-[#860000] hover:bg-red-800 w-full sm:w-[70%] md:w-[50%] text-white font-bold px-8 sm:px-12 py-3 rounded-full transition-colors duration-300 mt-4">
-              <a href="./Pages/about.html"></a>View more
-            </button>
-          </div>
-        </div>
-      </section>
+  </main>
 
-      <section id="brands" class="relative py-12 sm:py-20">
-       
-        
-        </div>
-      </section>
+  <footer id="footer">
 
-      <section class="relative w-full min-h-screen overflow-hidden py-12 sm:py-16 lg:py-4">
-        <div class="container mx-auto px-4 sm:px-8">
-          <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="order-2 md:order-1">
-              <img
-                src="./assets/images/home_img/order.png"
-                alt="Crispy Fried Chicken"
-                class="w-full h-auto object-cover rounded-lg max-w-md mx-auto"
-              />
-            </div>
+  </footer>
+  <script type="module" src="./js/fetchComponents.js"></script>
+  <script type="module" src="../js/panier.js"></script>
+  <script src="/js/index.js"></script>
 
-            <div class="flex flex-col gap-8 sm:gap-12 order-1 md:order-2 text-center md:text-left">
-              <div class="md:-rotate-12">
-                <h1 class="text-6xl sm:text-6xl md:text-7xl lg:text-9xl font-black text-yellow-400 leading-none mb-4 transform -rotate-3">
-                  Order
-                </h1>
-                <h1 class="text-6xl sm:text-6xl md:text-7xl lg:text-9xl font-black text-yellow-500 leading-none transform -rotate-2">
-                  now
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+</body>
 
-      <section class="py-12 sm:py-16">
-        <h2 id="font" class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-12 sm:mb-16">
-          <span class="text-white">Customer </span>
-          <span class="text-[#860000]">reviews</span>
-        </h2>
-        
-        <div class="w-full px-4 sm:px-8">
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-lg">
-              <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center gap-3">
-                  <img src="./assets/images/home_img/téléchargement (13).jpg" alt="St Gix" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"/>
-                  <div>
-                    <h3 class="font-bold text-gray-900 text-sm sm:text-base">St Gix</h3>
-                    <p class="text-xs sm:text-sm text-gray-600">South London</p>
-                  </div>
-                </div>
-                <div class="flex gap-0.5 sm:gap-1">
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                </div>
-              </div>
-              <div class="flex items-center gap-2 mb-4">
-                <span class="text-yellow-500 w-4"><img src="./assets/images/home_img/watch.png" alt=""/></span>
-                <span class="text-xs sm:text-sm text-gray-600">24th September, 2023</span>
-              </div>
-              <p class="text-gray-700 leading-relaxed text-xs sm:text-sm">
-                The positive aspect was undoubtedly the efficiency of the service. The queue moved quickly, the staff was friendly, and the food was up to the usual McDonald's standard – hot and satisfying.
-              </p>
-            </div>
-
-            <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-lg">
-              <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center gap-3">
-                  <img src="./assets/images/home_img/téléchargement (8).jpg" alt="St Gix" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"/>
-                  <div>
-                    <h3 class="font-bold text-gray-900 text-sm sm:text-base">St Gix</h3>
-                    <p class="text-xs sm:text-sm text-gray-600">South London</p>
-                  </div>
-                </div>
-                <div class="flex gap-0.5 sm:gap-1">
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                </div>
-              </div>
-              <div class="flex items-center gap-2 mb-4">
-                <span class="text-yellow-500 w-4"><img src="./assets/images/home_img/watch.png" alt=""/></span>
-                <span class="text-xs sm:text-sm text-gray-600">24th September, 2023</span>
-              </div>
-              <p class="text-gray-700 leading-relaxed text-xs sm:text-sm">
-                The positive aspect was undoubtedly the efficiency of the service. The queue moved quickly, the staff was friendly, and the food was up to the usual McDonald's standard – hot and satisfying.
-              </p>
-            </div>
-
-            <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-lg">
-              <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center gap-3">
-                  <img src="./assets/images/home_img/téléchargement (9).jpg" alt="St Gix" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"/>
-                  <div>
-                    <h3 class="font-bold text-gray-900 text-sm sm:text-base">St Gix</h3>
-                    <p class="text-xs sm:text-sm text-gray-600">South London</p>
-                  </div>
-                </div>
-                <div class="flex gap-0.5 sm:gap-1">
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                  <span class="text-yellow-400 text-sm sm:text-base">⭐</span>
-                </div>
-              </div>
-              <div class="flex items-center gap-2 mb-4">
-                <span class="text-yellow-500 w-4"><img src="./assets/images/home_img/watch.png" alt=""/></span>
-                <span class="text-xs sm:text-sm text-gray-600">24th September, 2023</span>
-              </div>
-              <p class="text-gray-700 leading-relaxed text-xs sm:text-sm">
-                The positive aspect was undoubtedly the efficiency of the service. The queue moved quickly, the staff was friendly, and the food was up to the usual McDonald's standard – hot and satisfying.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      
-    </main>
-
-    <footer id="footer">
-
-    </footer>
-    <script type="module" src="./js/fetchComponents.js"></script>
-    <script type="module" src="../js/panier.js" ></script>
-    <script src="/js/index.js"></script> 
-   
-  </body>
 </html>

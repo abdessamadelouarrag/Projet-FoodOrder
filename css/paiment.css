@@ -1,3 +1,18 @@
 body{
     background-color: #101018;
 }
+.input-error {
+    border: 2px solid #ff6b6b !important;
+    background-color: #fff5f5 !important;
+  }
+
+  .error-message {
+    color: #ff6b6b;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .input-valid {
+    border: 2px solid #51cf66 !important;
+  }

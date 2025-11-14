@@ -33,6 +33,101 @@ sectionHeader.addEventListener('mouseleave', () => {
     setTimeout(() => titlePaiment.classList.add('hidden'), 500);
 }); 
 
+const inputs = {
+  firstName: document.getElementById('FirstName'),
+  lastName: document.getElementById('LastName'),
+  email: document.getElementById('Email'),
+  phone: document.getElementById('PhoneNumber'),
+  date: document.getElementById('Date'),
+  time: document.getElementById('Time'),
+};
+
+const errorDivs = {
+  firstName: document.getElementById('firstNameError'),
+  lastName: document.getElementById('lastNameError'),
+  email: document.getElementById('emailError'),
+  phone: document.getElementById('phoneError'),
+  date: document.getElementById('dateError'),
+  time: document.getElementById('timeError'),
+};
+
+const validators = {
+  firstName: (value) => {
+    if (!value.trim()) return 'First Name is required';
+    if (!/^[a-zA-Z\s'-]+$/.test(value)) return 'First Name can only contain letters';
+    return '';
+  },
+  lastName: (value) => {
+    if (!value.trim()) return 'Last Name is required';
+    if (!/^[a-zA-Z\s'-]+$/.test(value)) return 'Last Name can only contain letters';
+    return '';
+  },
+  email: (value) => {
+    if (!value.trim()) return 'Email is required';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'Please enter a valid email';
+    return '';
+  },
+  phone: (value) => {
+    if (!value.trim()) return 'Phone Number is required';
+    if (!/^[\d\s\-\+()]+$/.test(value) || value.replace(/\D/g, '').length < 10) 
+      return 'Please enter a valid phone number';
+    return '';
+  },
+  date: (value) => {
+    if (!value) return 'Date is required';
+    const selectedDate = new Date(value);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    if (selectedDate < today) return 'Date cannot be in the past';
+    return '';
+  },
+  time: (value) => {
+    if (inputs.date.value && !value) return 'Time is required when date is selected';
+    return '';
+  },
+};
+
+Object.entries(inputs).forEach(([key, input]) => {
+  input.addEventListener('blur', () => validateField(key));
+  input.addEventListener('input', () => {
+    if (errorDivs[key].textContent) validateField(key);
+  });
+});
+
+function validateField(fieldName) {
+  const value = inputs[fieldName].value;
+  const error = validators[fieldName](value);
+  
+  if (error) {
+    errorDivs[fieldName].textContent = error;
+    errorDivs[fieldName].classList.remove('hidden');
+    inputs[fieldName].classList.add('input-error');
+    inputs[fieldName].classList.remove('input-valid');
+    return false;
+  } else {
+    errorDivs[fieldName].textContent = '';
+    errorDivs[fieldName].classList.add('hidden');
+    inputs[fieldName].classList.remove('input-error');
+    inputs[fieldName].classList.add('input-valid');
+    return true;
+  }
+}
+
+
+form.addEventListener('submit', (e) => {
+  let isValid = true;
+  Object.keys(validators).forEach(fieldName => {
+    if (!validateField(fieldName)) {
+      isValid = false;
+    }
+  });
+
+  if (!isValid) {
+    e.preventDefault();
+    alert('Please fill in all required fields correctly.');
+  }
+});
+
 let listProduit = JSON.parse(localStorage.getItem("produits")) || [];
 listProduit.forEach(e => {
     let card = document.createElement("div");
