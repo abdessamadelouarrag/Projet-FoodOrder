@@ -40,7 +40,7 @@ cartProduct.forEach(product=>{
         document.querySelector('.totalPanier').textContent =((parseFloat(document.querySelector('.totalPanier').textContent)-product.price)).toFixed(2).toString()
         document.querySelectorAll('.totalPanier')[1].textContent = document.querySelector('.totalPanier').textContent
 
-    })}catch{console.log("fuck u1 ")}
+    })}catch{console.log("erreur ")}
     //
     //
 
@@ -56,7 +56,7 @@ cartProduct.forEach(product=>{
         localStorage.setItem("produits",JSON.stringify(cartProduct))
         document.querySelector('.totalPanier').textContent = (parseFloat(document.querySelector('.totalPanier').textContent)+parseFloat(product.price)).toFixed(2).toString()
         document.querySelectorAll('.totalPanier')[1].textContent = document.querySelector('.totalPanier').textContent
-    }) }catch{console.log("fuck u2 ")}
+    }) }catch{console.log("erreur 2 ")}
 
     //removeeeee from the fk local storage
     try{inject.querySelector('#deleteCartCard').addEventListener('click',e=>{
@@ -67,12 +67,10 @@ cartProduct.forEach(product=>{
 
         document.querySelector('.totalPanier').textContent = (parseFloat(document.querySelector('.totalPanier').textContent)- ( parseFloat(product.price)*parseInt(product.quantity)    )).toFixed(2).toString()
         document.querySelectorAll('.totalPanier')[1].textContent = document.querySelector('.totalPanier').textContent
-    })}catch{console.log("fuck u3 ")}
+    })}catch{console.log("erreur 3 ")}
 //--------------------------------
 
     document.querySelectorAll('.totalPanier')[1].textContent = document.querySelector('.totalPanier').textContent
     document.getElementById("elemnt-ajouter").append(inject)
 })
 
-///////////erreur lwl khas xi blan kfch html dyal panier treload onclick
-// khas hta localstorage l total

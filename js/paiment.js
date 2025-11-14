@@ -286,7 +286,20 @@ form.addEventListener('submit', (e) => {
     const isValid = inputs.every(value => value && value.trim() !== '');
 
     if (isValid) {
-        generateOrderPDF(customerData);
+        let produits = JSON.parse(localStorage.getItem("produits")) || [];
+        if(produits.length > 0){
+            if(confirm("are you shure about commande")==true){
+                let list = [];
+                generateOrderPDF(customerData);
+                localStorage.seItem("produits",JSON.stringify(list))
+                window.location.href = "../Pages/menu.html"
+            }
+        }else{
+            alert("please choose a produit")
+            window.location.href = "../Pages/menu.html"
+        }
+        
+        
     }
 });
 
