@@ -208,7 +208,7 @@ export function Footer() {
       <div class="text-center mb-8">
         <div class="flex justify-center items-center gap-1 mb-6">
           <img
-            src="/assets/images/Footer/logo.png"
+            src="../assets/images/Footer/LOGO2.png"
             alt="Logo"
             class="max-w-[150px]"
           />
@@ -368,7 +368,7 @@ export function Footer() {
     <div class="hidden lg:grid grid-cols-5 gap-8">
       <div>
         <div class="flex items-center gap-1 mb-6">
-          <img src="/assets/images/Footer/LOGO 2.png" alt="Logo" />
+          <img src="/assets/images/Footer/LOGO2.png" alt="Logo" />
         </div>
 
         <div class="flex gap-3 mb-6">
